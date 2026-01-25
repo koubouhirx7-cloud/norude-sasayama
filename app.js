@@ -46,6 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Hamburger Menu
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('is-active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('is-active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // Data Definitions
     const stations = [
         { name: '篠山城下町ホテル NIPPONIA', coords: [135.2165, 35.0725], icon: 'bicycle' },
