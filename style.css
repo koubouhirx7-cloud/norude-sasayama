@@ -366,6 +366,10 @@ footer a:hover {
     margin-top: var(--spacing-lg);
 }
 
+.mobile-ride-container {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #map {
         height: 400px;
@@ -392,8 +396,4 @@ footer a:hover {
         border: none;
         box-shadow: 0 4px 15px rgba(26, 77, 46, 0.3);
     }
-}
-
-.mobile-ride-container {
-    display: none;
 }
