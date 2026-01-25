@@ -87,43 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial call for animations (handles static and dynamically added items)
     initAnimations();
-
-    // Mapbox Initialization
-    if (typeof mapboxgl !== 'undefined') {
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZGFpc3VrZW11cmFrYW1pIiwiYSI6ImNtNXp6Z3Z1bjBxcXoya3B6YjAyZm5xcGsifQ.w4KqeL-gX7y81fA9OQy6_g';
-
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/light-v11',
-            center: [135.2165, 35.0725],
-            zoom: 12
-        });
-
-        map.addControl(new mapboxgl.NavigationControl());
-
-        // Add Station Markers
-        stations.forEach(station => {
-            const el = document.createElement('div');
-            el.className = 'marker station';
-            el.innerHTML = `<i class="fas fa-${station.icon}"></i>`;
-
-            new mapboxgl.Marker(el)
-                .setLngLat(station.coords)
-                .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`<h3>${station.name}</h3><p>レンタサイクルポート</p>`))
-                .addTo(map);
-        });
-
-        // Add Sightseeing Markers
-        spots.forEach(spot => {
-            const el = document.createElement('div');
-            el.className = 'marker sightseeing';
-            el.innerHTML = `<i class="fas fa-${spot.icon}"></i>`;
-
-            new mapboxgl.Marker(el)
-                .setLngLat(spot.coords)
-                .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`<h3>${spot.name}</h3><p>${spot.description}</p>`))
-                .addTo(map);
-        });
-    }
 });
 

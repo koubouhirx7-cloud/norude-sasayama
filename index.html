@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Password Protection -->
     <script src="auth.js"></script>
-    <!-- Mapbox GL JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -204,9 +201,11 @@
         <div class="container">
             <h2 class="section-title">サイクリングマップ</h2>
             <p class="text-center text-secondary mb-32" style="margin-bottom: 32px;">
-                おすすめの観光ルートをご覧いただけます。
+                おすすめの観光ルートをご覧いただけます。3D地形表示やルート案内機能を搭載しています。
             </p>
-            <div id="map"></div>
+            <iframe id="map" src="https://mapbox-sasayama.vercel.app/" title="丹波篠山サイクリングマップ" style="border: none;"
+                loading="lazy" allow="geolocation">
+            </iframe>
         </div>
     </section>
 
