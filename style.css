@@ -371,4 +371,29 @@ footer a:hover {
         height: 400px;
         border-radius: var(--radius-md);
     }
+
+    .mobile-ride-container {
+        display: flex;
+        justify-content: center;
+        margin-top: var(--spacing-md);
+    }
+
+    .btn-mobile-ride {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--color-primary);
+        color: white;
+        border: none;
+        box-shadow: 0 4px 15px rgba(26, 77, 46, 0.3);
+    }
+}
+
+.mobile-ride-container {
+    display: none;
 }

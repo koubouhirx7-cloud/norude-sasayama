@@ -85,6 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile "Start Ride" button
+    const startRideBtn = document.getElementById('btn-start-ride');
+    const mapIframe = document.getElementById('map');
+    if (startRideBtn && mapIframe) {
+        startRideBtn.addEventListener('click', () => {
+            const currentSrc = mapIframe.src.split('?')[0];
+            mapIframe.src = `${currentSrc}?mode=ride`;
+            // Scroll to map
+            mapIframe.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
     // Initial call for animations (handles static and dynamically added items)
     initAnimations();
 });
