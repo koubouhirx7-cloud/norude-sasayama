@@ -141,8 +141,8 @@
     <!-- Stations List -->
     <section class="section-padding">
         <div class="container">
-            <div class="stations-grid" id="stations-container">
-                <!-- JavaScript will populate this -->
+            <div class="station-list">
+                <!-- app.js will populate this -->
             </div>
         </div>
     </section>
@@ -219,76 +219,6 @@
         </div>
     </footer>
 
-    <script>
-        // Use the same data as app.js (or we could centralize it)
-        const stations = [
-            { name: '篠山城下町ホテル NIPPONIA', coords: [135.2165, 35.0725], address: '兵庫県丹波篠山市西町25' },
-            { name: '丹波篠山市役所 城東支所', coords: [135.2530, 35.0780], address: '兵庫県丹波篠山市日置383-1' },
-            { name: '丹波篠山市役所 多岐支所', coords: [135.1250, 35.1150], address: '兵庫県丹波篠山市多紀町' }, // 暫定
-            { name: '丹波篠山ハートピア', coords: [135.2150, 35.0750], address: '兵庫県丹波篠山市河原町' }, // 暫定
-            { name: '丹波篠山観光協会', coords: [135.2191, 35.0755], address: '兵庫県丹波篠山市北新町97' },
-            { name: 'JR篠山口駅', coords: [135.1776, 35.0562], address: '兵庫県丹波篠山市大沢' },
-            { name: '兵庫県立丹波並木道中央公園', coords: [135.1606, 35.0755], address: '兵庫県丹波篠山市大沢611-3' },
-            { name: '篠山チルドレンミュージアム', coords: [135.2750, 35.0720], address: '兵庫県丹波篠山市小立727' }
-        ];
-
-        const container = document.getElementById('stations-container');
-
-        stations.forEach((station, index) => {
-            const card = document.createElement('div');
-            card.className = 'station-card animate-scroll';
-            card.style.transitionDelay = `${index * 0.1}s`;
-
-            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${station.coords[1]},${station.coords[0]}`;
-
-            card.innerHTML = `
-                <div class="station-image">
-                    <div style="width:100%; height:100%; background: linear-gradient(45deg, var(--color-primary), var(--color-secondary)); display:flex; align-items:center; justify-content:center; color:white; font-size:3rem;">
-                        <i class="fas fa-bicycle"></i>
-                    </div>
-                </div>
-                <div class="station-info">
-                    <h2 class="station-name">${station.name}</h2>
-                    <p class="station-address">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>${station.address}</span>
-                    </p>
-                    <div class="station-actions">
-                        <a href="${mapsUrl}" target="_blank" class="btn btn-primary btn-sm">
-                            <i class="fas fa-map-marked-alt"></i> Google Mapsで見る
-                        </a>
-                    </div>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-
-        // Simple observer for animation
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        document.querySelectorAll('.animate-scroll').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            obs.observe(el);
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', () => {
-                menuToggle.classList.toggle('is-active');
-                navLinks.classList.toggle('active');
-            });
-        }
-    </script>
     <script src="app.js"></script>
 </body>
 
