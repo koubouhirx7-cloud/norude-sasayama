@@ -150,13 +150,55 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const mannedStations = [
-        { name: 'JR篠山口駅レンタサイクル', coords: [135.1776, 35.0562], type: 'manned' },
-        { name: '兵庫県立丹波並木道中央公園', coords: [135.1606, 35.0755], type: 'manned' },
-        { name: '篠山チルドレンミュージアム', coords: [135.2750, 35.0720], type: 'manned' },
-        { name: '立杭陶の郷', coords: [135.1118, 35.0210], type: 'manned' },
-        { name: '丹波篠山市観光協会', coords: [135.2191, 35.0755], type: 'manned' },
-        { name: 'ハイランダー / 里山の自転車店', coords: [135.1500, 35.0800], type: 'manned' },
-        { name: 'ユニトピアささやま', coords: [135.1950, 35.0930], type: 'manned' }
+        {
+            name: 'JR篠山口駅レンタサイクル',
+            coords: [135.1776, 35.0562],
+            hours: '9:00 - 17:00',
+            holidays: '年末年始',
+            description: 'JR篠山口駅のすぐそば。電車でのアクセスに最も便利な有人レンタサイクルです。'
+        },
+        {
+            name: '兵庫県立丹波並木道中央公園',
+            coords: [135.1606, 35.0755],
+            hours: '9:00 - 17:00',
+            holidays: '年末年始',
+            description: '公園内のサイクリングコースを楽しむのに最適。自然豊かな環境でリフレッシュできます。'
+        },
+        {
+            name: '篠山チルドレンミュージアム',
+            coords: [135.2750, 35.0720],
+            hours: '10:00 - 17:00',
+            holidays: '水・木曜日（祝日は翌日）、12月〜3月中旬',
+            description: 'ミュージアムの開館時間に合わせて利用可能。少し離れた「かかしの里」への観光にも便利です。'
+        },
+        {
+            name: '立杭陶の郷',
+            coords: [135.1118, 35.0210],
+            hours: '10:00 - 16:00',
+            holidays: '火曜日（祝日は営業）、年末年始',
+            description: '陶芸の里、今田地区を巡る拠点。坂道の多い地区なので、周辺散策には自転車が便利です。'
+        },
+        {
+            name: '丹波篠山市観光協会',
+            coords: [135.2191, 35.0755],
+            hours: '9:00 - 17:00',
+            holidays: '年末年始',
+            description: '観光案内のすぐそば。スタッフからおすすめルートを聞いてから旅を始められます。'
+        },
+        {
+            name: 'ハイランダー / 里山の自転車店',
+            coords: [135.1500, 35.0800],
+            hours: '10:00 - 18:00',
+            holidays: '水曜日',
+            description: '本格的な自転車も取り扱うプロショップ。里山を巡るのに最適な自転車を選べます。'
+        },
+        {
+            name: 'ユニトピアささやま',
+            coords: [135.1950, 35.0930],
+            hours: '9:00 - 17:00',
+            holidays: '年中無休（点検休園あり）',
+            description: '大型レジャー施設内から出発。広大な敷地の散策や周辺観光におすすめです。'
+        }
     ];
 
     const spots = [
@@ -172,8 +214,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!modal) return;
 
         document.getElementById('modal-name').textContent = station.name;
-        // document.getElementById('modal-hours').textContent = station.hours; // Removed
-        document.getElementById('modal-price').textContent = station.price || '会場にて確認';
+
+        // Conditional rows: Hours
+        const hoursRow = document.getElementById('modal-hours-row');
+        const hoursText = document.getElementById('modal-hours');
+        if (hoursRow && hoursText) {
+            if (station.hours) {
+                hoursText.textContent = station.hours;
+                hoursRow.style.display = 'table-row';
+            } else {
+                hoursRow.style.display = 'none';
+            }
+        }
+
+        // Conditional rows: Holidays
+        const holidaysRow = document.getElementById('modal-holidays-row');
+        const holidaysText = document.getElementById('modal-holidays');
+        if (holidaysRow && holidaysText) {
+            if (station.holidays) {
+                holidaysText.textContent = station.holidays;
+                holidaysRow.style.display = 'table-row';
+            } else {
+                holidaysRow.style.display = 'none';
+            }
+        }
+
+        document.getElementById('modal-price').textContent = station.price || '窓口にて確認';
         document.getElementById('modal-ports').textContent = station.ports || '-';
         document.getElementById('modal-bike-type').textContent = station.bikeType || '普通自転車 / 電動自転車';
         document.getElementById('modal-description').textContent = station.description || '有人窓口にて貸出を行っています。詳細は直接お問い合わせください。';
