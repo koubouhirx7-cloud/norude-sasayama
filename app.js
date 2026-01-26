@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!modal) return;
 
         document.getElementById('modal-name').textContent = station.name;
-        document.getElementById('modal-hours').textContent = station.hours;
         document.getElementById('modal-price').textContent = station.price;
         document.getElementById('modal-ports').textContent = station.ports;
         document.getElementById('modal-bike-type').textContent = station.bikeType;
