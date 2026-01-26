@@ -239,7 +239,7 @@ a {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -249,11 +249,14 @@ a {
     justify-content: center;
     text-align: center;
     color: white;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 40px;
 }
 
 @media (max-width: 768px) {
     .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
         background-attachment: scroll;
         /* Better performance on mobile */
         background-position: center center;
@@ -615,7 +618,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     #map {
-        height: 400px;
+        height: 700px;
         border-radius: var(--radius-md);
     }
 
