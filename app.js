@@ -448,14 +448,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '丹波篠山市役所 城東支所', en: 'Joto Branch Office' },
-            coords: [135.2530, 35.0780],
-            address: { ja: '兵庫県丹波篠山市日置383-1', en: '383-1 Hioki, Tamba Sasayama, Hyogo' },
+            coords: [135.27937, 35.07065],
+            address: { ja: '兵庫県丹波篠山市日置385-1', en: '385-1 Hioki, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
                 en: '800 yen / 3h (1,500 yen until 9 AM next day), repeats daily'
             },
-            ports: { ja: '3台', en: '3 Bikes' },
+            ports: { ja: '2台', en: '2 Bikes' },
             bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
             description: {
                 ja: '城東地区の拠点となるステーションです。周辺の里山風景を楽しみながらのサイクリングにおすすめです。',
@@ -464,14 +464,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '丹波篠山市役所 多岐支所', en: 'Taki Branch Office' },
-            coords: [135.1250, 35.1150],
-            address: { ja: '兵庫県丹波篠山市多紀浄174', en: '174 Taki, Tamba Sasayama, Hyogo' },
+            coords: [135.343914, 35.071843],
+            address: { ja: '兵庫県丹波篠山市福住342', en: '342 Fukusumi, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
                 en: '800 yen / 3h (1,500 yen until 9 AM next day), repeats daily'
             },
-            ports: { ja: '3台', en: '3 Bikes' },
+            ports: { ja: '2台', en: '2 Bikes' },
             bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
             description: {
                 ja: '多紀地区の観光や移動に便利なスポットです。自然豊かなコースが周辺に広がっています。',
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
                 en: '800 yen / 3h (1,500 yen until 9 AM next day), repeats daily'
             },
-            ports: { ja: '4台', en: '4 Bikes' },
+            ports: { ja: '2台', en: '2 Bikes' },
             bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
             description: {
                 ja: '市民の憩いの場であるハートピアに設置。文化施設へのアクセスも良好です。',
@@ -742,9 +742,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return R * c; // Distance in km
     };
 
-    const sortStationsByLocation = () => {
-        const statusEl = document.getElementById('location-status');
-        const btn = document.getElementById('btn-nearest-station');
+    const sortStationsByLocation = (statusElementId, buttonId) => {
+        const statusEl = document.getElementById(statusElementId);
+        const btn = document.getElementById(buttonId);
+
+        if (!statusEl || !btn) return;
 
         if (!navigator.geolocation) {
             statusEl.textContent = translations[currentLang]["location-error"];
@@ -806,6 +808,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnNearest = document.getElementById('btn-nearest-station');
     if (btnNearest) {
-        btnNearest.addEventListener('click', sortStationsByLocation);
+        btnNearest.addEventListener('click', () => sortStationsByLocation('location-status', 'btn-nearest-station'));
+    }
+
+    const btnNearestManned = document.getElementById('btn-nearest-manned');
+    if (btnNearestManned) {
+        btnNearestManned.addEventListener('click', () => sortStationsByLocation('location-status-manned', 'btn-nearest-manned'));
     }
 });
