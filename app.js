@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: '丹波篠山観光協会',
             coords: [135.2191, 35.0755],
             address: '兵庫県丹波篠山市北新町97',
-            hours: '24時間',
-            price: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
+            hours: '9:00 - 17:00',
+            price: '¥800 / 3時間',
             ports: '6台',
             bikeType: '電動アシスト自転車',
             description: '観光案内のすぐそば。最新の観光情報を手に入れてから、すぐに旅を始められます。'
