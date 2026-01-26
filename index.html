@@ -158,14 +158,8 @@
     <section id="stations" class="section-padding" style="background: var(--color-bg);">
         <div class="container">
             <h2 class="section-title">設置ステーション</h2>
-            <div class="station-list">
-                <!-- Javascript will render this, but putting static HTML for SEO/First Load -->
-                <div class="station-item"><i class="fas fa-parking text-primary"></i> 篠山城下町ホテル NIPPONIA</div>
-                <div class="station-item"><i class="fas fa-parking text-primary"></i> 丹波ささやまホロンピアホテル</div>
-                <div class="station-item"><i class="fas fa-parking text-primary"></i> 丹波篠山市役所 城東支所</div>
-                <div class="station-item"><i class="fas fa-parking text-primary"></i> 丹波篠山市役所 多岐支所</div>
-                <div class="station-item"><i class="fas fa-parking text-primary"></i> 丹波篠山ハートピア</div>
-                <div class="station-item"><i class="fas fa-parking text-primary"></i> 丹波篠山観光協会</div>
+            <div class="station-list" id="managed-stations">
+                <!-- Javascript will render this -->
             </div>
 
             <h3 class="section-title" style="margin-top: 64px; font-size: 1.8rem;">その他のレンタサイクル（有人）</h3>
@@ -173,29 +167,8 @@
                 以下の施設では、有人窓口にて自転車の貸出を行っています。<br>
                 <span style="font-size: 0.9rem; opacity: 0.8;">※Norude Sasayamaアプリとは別のシステムとなります。詳細はお問い合わせください。</span>
             </p>
-            <div class="station-list">
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=JR篠山口駅" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">JR篠山口駅レンタサイクル</a></div>
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=兵庫県立丹波並木道中央公園" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">兵庫県立丹波並木道中央公園</a></div>
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=篠山チルドレンミュージアム" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">篠山チルドレンミュージアム</a></div>
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=立杭陶の郷" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">立杭陶の郷</a></div>
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=丹波篠山市観光協会" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">丹波篠山市観光協会</a></div>
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=ハイランダー+里山の自転車店+丹波篠山" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">ハイランダー / 里山の自転車店</a>
-                </div>
-                <div class="station-item"><i class="fas fa-bicycle text-secondary"></i> <a
-                        href="https://www.google.com/maps/search/?api=1&query=ユニトピアささやま" target="_blank"
-                        rel="noopener noreferrer" style="color: inherit; text-decoration: none;">ユニトピアささやま</a></div>
+            <div class="station-list" id="manned-stations">
+                <!-- Javascript will render this -->
             </div>
 
             <div style="text-align: center; margin-top: 40px;">

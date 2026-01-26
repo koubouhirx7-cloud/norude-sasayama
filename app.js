@@ -149,6 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    const mannedStations = [
+        { name: 'JR篠山口駅レンタサイクル', coords: [135.1776, 35.0562], type: 'manned' },
+        { name: '兵庫県立丹波並木道中央公園', coords: [135.1606, 35.0755], type: 'manned' },
+        { name: '篠山チルドレンミュージアム', coords: [135.2750, 35.0720], type: 'manned' },
+        { name: '立杭陶の郷', coords: [135.1118, 35.0210], type: 'manned' },
+        { name: '丹波篠山市観光協会', coords: [135.2191, 35.0755], type: 'manned' },
+        { name: 'ハイランダー / 里山の自転車店', coords: [135.1500, 35.0800], type: 'manned' },
+        { name: 'ユニトピアささやま', coords: [135.1950, 35.0930], type: 'manned' }
+    ];
+
     const spots = [
         { name: '篠山城跡', coords: [135.2170, 35.0734], description: '歴史的観光名所', icon: 'landmark' },
         { name: 'かかしの里', coords: [135.2600, 35.0600], description: 'ユニークな案山子が見られるスポット', icon: 'camera' }
@@ -162,29 +172,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!modal) return;
 
         document.getElementById('modal-name').textContent = station.name;
-        document.getElementById('modal-price').textContent = station.price;
-        document.getElementById('modal-ports').textContent = station.ports;
-        document.getElementById('modal-bike-type').textContent = station.bikeType;
-        document.getElementById('modal-description').textContent = station.description;
-        document.getElementById('modal-address-text').textContent = station.address;
+        // document.getElementById('modal-hours').textContent = station.hours; // Removed
+        document.getElementById('modal-price').textContent = station.price || '会場にて確認';
+        document.getElementById('modal-ports').textContent = station.ports || '-';
+        document.getElementById('modal-bike-type').textContent = station.bikeType || '普通自転車 / 電動自転車';
+        document.getElementById('modal-description').textContent = station.description || '有人窓口にて貸出を行っています。詳細は直接お問い合わせください。';
+        document.getElementById('modal-address-text').textContent = station.address || '';
 
         // Dynamic Map Embed
         const mapContainer = document.getElementById('modal-map-container');
         if (mapContainer) {
             const lat = station.coords[1];
             const lng = station.coords[0];
-            mapContainer.innerHTML = `<iframe 
-                width="100%" 
-                height="100%" 
-                style="border:0" 
-                loading="lazy" 
-                allowfullscreen 
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place?key=REPLACE_WITH_YOUR_KEY&q=${lat},${lng}&zoom=15">
-            </iframe>`;
-
-            // Note: Since I don't have an API key, I'll use a search query embed which doesn't strictly require one for basic use but works better with one.
-            // Alternatively, a simple search-based iframe:
             mapContainer.innerHTML = `<iframe 
                 width="100%" 
                 height="100%" 
@@ -213,24 +212,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Render Station List/Grid in HTML
-    const stationContainer = document.querySelector('.station-list');
-    if (stationContainer) {
-        stationContainer.innerHTML = ''; // Clear static content
-        stations.forEach((station, index) => {
-            const item = document.createElement('div');
-            item.className = 'station-item animate-scroll';
-            item.style.transitionDelay = `${index * 0.1}s`;
-            item.style.cursor = 'pointer';
+    // Render Function
+    const renderStations = (containerId, dataList, iconClass, useModal = true) => {
+        const container = document.getElementById(containerId) || document.querySelector(`.${containerId}`);
+        if (!container) return;
 
-            item.innerHTML = `
-                <i class="fas fa-parking text-primary"></i> 
-                <span style="font-weight: 500;">${station.name}</span>
+        container.innerHTML = '';
+        dataList.forEach((item, index) => {
+            const el = document.createElement('div');
+            el.className = 'station-item animate-scroll';
+            el.style.transitionDelay = `${index * 0.1}s`;
+            el.style.cursor = 'pointer';
+
+            el.innerHTML = `
+                <i class="fas ${iconClass}"></i> 
+                <span style="font-weight: 500;">${item.name}</span>
             `;
 
-            item.addEventListener('click', () => openModal(station));
-            stationContainer.appendChild(item);
+            if (useModal) {
+                el.addEventListener('click', () => openModal(item));
+            } else {
+                const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${item.coords[1]},${item.coords[0]}`;
+                el.addEventListener('click', () => window.open(mapsUrl, '_blank'));
+            }
+            container.appendChild(el);
         });
+    };
+
+    // Initial Render
+    renderStations('managed-stations', stations, 'fa-parking text-primary');
+    renderStations('manned-stations', mannedStations, 'fa-bicycle text-secondary');
+
+    // Fallback for general .station-list (like on stations.html)
+    const generalList = document.querySelector('.station-list:not(#managed-stations):not(#manned-stations)');
+    if (generalList) {
+        renderStations(generalList.className.split(' ')[0], stations, 'fa-parking text-primary');
     }
 
     // Initial call for animations (handles static and dynamically added items)
