@@ -219,6 +219,71 @@
         </div>
     </footer>
 
+    <!-- Station Detail Modal -->
+    <div class="modal-overlay" id="station-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-hero" id="modal-hero">
+                <!-- Hero image placeholder -->
+                <span>Hero Image</span>
+            </div>
+            <div class="modal-content">
+                <div class="modal-title-area">
+                    <h2 id="modal-name">ステーション名</h2>
+                    <div class="location-sub" id="modal-location-sub">兵庫県丹波篠山市</div>
+                </div>
+
+                <div class="modal-description" id="modal-description">
+                    ここにステーションの説明文が入ります。周辺の観光情報やアクセスの良さをアピールします。
+                </div>
+
+                <div class="modal-grid">
+                    <div class="info-section">
+                        <h3>ご利用案内</h3>
+                        <table class="info-table">
+                            <tr>
+                                <th>営業時間</th>
+                                <td id="modal-hours">24時間</td>
+                            </tr>
+                            <tr>
+                                <th>利用料金</th>
+                                <td id="modal-price">¥800 / 3時間</td>
+                            </tr>
+                            <tr>
+                                <th>ポート数</th>
+                                <td id="modal-ports">5ポート</td>
+                            </tr>
+                            <tr>
+                                <th>自転車タイプ</th>
+                                <td id="modal-bike-type">電動アシスト自転車</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="access-section">
+                        <h3>アクセス</h3>
+                        <div class="modal-map" id="modal-map-container">
+                            <!-- Map Embed will go here -->
+                            <div
+                                style="width:100%; height:100%; background:#f1f5f9; display:flex; align-items:center; justify-content:center; color:#94a3b8;">
+                                <i class="fas fa-map-marked-alt" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <div class="modal-address" id="modal-address-text">
+                            〒669-2397 兵庫県丹波篠山市北新町41
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="https://apps.apple.com/jp/app/rideblink-bike-sharing/id6444598723" target="_blank"
+                        class="btn-reserve">
+                        アプリで予約する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 
