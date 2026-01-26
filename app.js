@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Multi-language Support (i18n) ---
     const translations = {
         ja: {
-            "nav-about": "システムについて",
+            "nav-about": "なぜNorudeなのか？",
             "nav-guide": "利用ガイド",
             "nav-terms": "利用規約",
             "nav-stations": "ステーション",
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "terms-footer-note": "皆様に安全に丹波篠山を楽しんでいただくため、ルールを守ったご利用をお願い申し上げます。"
         },
         en: {
-            "nav-about": "About",
+            "nav-about": "Why Norude?",
             "nav-guide": "Guide",
             "nav-terms": "Terms",
             "nav-stations": "Stations",
