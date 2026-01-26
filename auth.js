@@ -15,6 +15,7 @@
         const isAuthenticated = sessionStorage.getItem(AUTH_KEY) === 'true';
 
         if (!isAuthenticated) {
+            document.body.classList.add('auth-locked');
             // Create overlay
             const overlay = document.createElement('div');
             overlay.style.cssText = `
@@ -23,7 +24,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.95);
+                background: rgba(0, 0, 0, 1);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -70,6 +71,7 @@
                 if (enteredPassword === CORRECT_PASSWORD) {
                     sessionStorage.setItem(AUTH_KEY, 'true');
                     overlay.remove();
+                    document.body.classList.remove('auth-locked');
                     document.body.style.overflow = '';
                 } else {
                     errorMsg.style.display = 'block';

@@ -41,6 +41,15 @@ body {
     overflow-x: hidden;
 }
 
+/* Hide content until authenticated */
+.auth-locked .navbar,
+.auth-locked header,
+.auth-locked section,
+.auth-locked footer {
+    visibility: hidden;
+    opacity: 0;
+}
+
 h1,
 h2,
 h3,
@@ -618,7 +627,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     #map {
-        height: 700px;
+        height: 550px;
         border-radius: var(--radius-md);
     }
 
