@@ -1054,3 +1054,16 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Center Manned Stations */
+#manned-stations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+#manned-stations .station-item {
+    flex: 0 1 300px;
+    width: 100%;
+}
