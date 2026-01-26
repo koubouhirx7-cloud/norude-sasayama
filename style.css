@@ -316,7 +316,30 @@ a {
     box-shadow: var(--shadow-sm);
 }
 
-/* Station Grid & Cards */
+/* Station List */
+.station-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.station-item {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.station-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Station Grid & Cards (for Detail Modal and Detailed Pages) */
 .station-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

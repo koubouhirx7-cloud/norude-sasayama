@@ -219,31 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stationContainer) {
         stationContainer.innerHTML = ''; // Clear static content
         stations.forEach((station, index) => {
-            const card = document.createElement('div');
-            card.className = 'station-card animate-scroll';
-            card.style.transitionDelay = `${index * 0.1}s`;
-            card.style.cursor = 'pointer';
+            const item = document.createElement('div');
+            item.className = 'station-item animate-scroll';
+            item.style.transitionDelay = `${index * 0.1}s`;
+            item.style.cursor = 'pointer';
 
-            card.innerHTML = `
-                <div class="station-card-image">
-                    <i class="fas fa-bicycle"></i>
-                </div>
-                <div class="station-card-info">
-                    <h3 class="station-card-name">${station.name}</h3>
-                    <p class="station-card-address">
-                        <i class="fas fa-map-marker-alt" style="color: var(--color-secondary);"></i>
-                        ${station.address}
-                    </p>
-                    <div class="station-card-actions">
-                        <span class="station-card-btn">
-                            詳細を見る
-                        </span>
-                    </div>
-                </div>
+            item.innerHTML = `
+                <i class="fas fa-parking text-primary"></i> 
+                <span style="font-weight: 500;">${station.name}</span>
             `;
 
-            card.addEventListener('click', () => openModal(station));
-            stationContainer.appendChild(card);
+            item.addEventListener('click', () => openModal(station));
+            stationContainer.appendChild(item);
         });
     }
 
