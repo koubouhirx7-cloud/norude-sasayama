@@ -269,11 +269,19 @@ a {
 }
 
 .hero p {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    margin-bottom: var(--spacing-lg);
-    max-width: 600px;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -559,6 +567,33 @@ footer a:hover {
     /* Simplified mobile nav for now */
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 25px;
+    }
+
+    .modal-title-area h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-hero {
+        height: 180px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
@@ -889,23 +924,5 @@ footer a:hover {
     .problem-solution-grid,
     .map-story-content {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .modal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        padding: 25px;
-    }
-
-    .modal-title-area h2 {
-        font-size: 1.5rem;
-    }
-
-    .modal-hero {
-        height: 180px;
     }
 }
