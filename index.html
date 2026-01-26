@@ -43,11 +43,11 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content animate-up">
-            <h1>丹波篠山を、自由に駆ける。</h1>
-            <p>24時間いつでも利用可能。アプリひとつで始まる、新しい旅のスタイル。</p>
+            <h1>丹波篠山を、もっと深く、もっと自由に。</h1>
+            <p>時間の制約も、場所の悩みも。すべてを解き放つ、新しい観光のカタチ。</p>
             <div style="display: flex; gap: 16px; justify-content: center;">
-                <a href="#stations" class="btn btn-primary">自転車を探す</a>
-                <a href="guide.html" class="btn" style="background: white; color: var(--color-text);">利用方法を見る</a>
+                <a href="#about" class="btn btn-primary">Norudeで変わる旅</a>
+                <a href="#stations" class="btn" style="background: white; color: var(--color-text);">自転車を探す</a>
             </div>
 
             <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
@@ -72,29 +72,65 @@
         </div>
     </header>
 
-    <!-- Rental Cycle Section -->
-    <section id="about" class="section-padding">
+    <!-- Why Norude Section (Problem/Solution) -->
+    <section id="about" class="section-padding story-section">
         <div class="container">
-            <h2 class="section-title">24時間無人レンタサイクル</h2>
-            <p class="text-center text-secondary mb-32" style="margin-bottom: 48px;">
-                スマホひとつで貸出・返却が可能。観光も日常の移動も、もっとスムーズに。
+            <h2 class="section-title">なぜ「Norude」なのか？</h2>
+            <p class="text-center text-secondary mb-32">
+                これまでのレンタサイクルで感じていたストレスを、最新のシステムが解決します。
             </p>
 
-            <div class="features-grid">
-                <div class="feature-card animate-scroll">
-                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
-                    <h3>24時間いつでも</h3>
-                    <p>アプリを使えば、早朝でも深夜でも好きな時間にレンタル開始・返却が可能です。</p>
+            <div class="problem-solution-grid">
+                <!-- Problems -->
+                <div class="problem-area animate-scroll">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 24px; color: #64748b;">これまでのレンタサイクル</h3>
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <strong>時間の制限</strong>
+                            <p>「17時までに返さないと…」閉館時間を気にして、観光を切り上げる必要がありました。</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <strong>手続きの煩わしさ</strong>
+                            <p>窓口での書類記入や、現金でのやり取り。出発までに時間がかかっていました。</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <strong>返却場所の固定</strong>
+                            <p>借りた場所まで戻らなければならず、ルートが限定されていました。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card animate-scroll delay-1">
-                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>スマホで完結</h3>
-                    <p>アプリのダウンロードから決済、解錠まで全てスマートフォンアプリで行えます。</p>
-                </div>
-                <div class="feature-card animate-scroll delay-2">
-                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>市内多数のポート</h3>
-                    <p>市内の主要観光地やホテルにステーションを設置しています。</p>
+
+                <!-- Solutions -->
+                <div class="solution-area animate-scroll delay-1">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 24px; color: var(--color-primary);">これからの「Norude」</h3>
+                    <div class="solution-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>24時間、いつでも。</strong>
+                            <p>早朝の澄んだ空気の中も、夕暮れ時の情緒ある街並みも。あなたの時間で楽しめます。</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>スマホで30秒出発。</strong>
+                            <p>アプリでQRを読み取るだけ。キャッシュレス決済で、思い立った瞬間に旅が始まります。</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>どこでも返却可能。</strong>
+                            <p>市内に点在するステーションならどこでも返却OK。目的地に合わせた片道利用も自由自在。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,18 +215,41 @@
     <!-- Map Section -->
     <section id="map-section" class="section-padding" style="background: var(--color-bg);">
         <div class="container">
-            <h2 class="section-title">サイクリングマップ</h2>
-            <p class="text-center text-secondary mb-32" style="margin-bottom: 32px;">
-                おすすめの観光ルートをご覧いただけます。3D地形表示やルート案内機能を搭載しています。
-            </p>
-            <iframe id="map" src="https://mapbox-sasayama.vercel.app/" title="丹波篠山サイクリングマップ" style="border: none;"
-                loading="lazy" allow="geolocation">
-            </iframe>
-            <div class="mobile-ride-container">
-                <a id="btn-start-ride" href="https://mapbox-sasayama.vercel.app/?mode=ride" target="_blank"
-                    class="btn btn-primary btn-mobile-ride" style="text-decoration: none;">
-                    <i class="fas fa-bicycle"></i> ライドを始める
-                </a>
+            <h2 class="section-title">シームレスな観光体験を。</h2>
+
+            <div class="map-story-content">
+                <div class="animate-scroll">
+                    <h3 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 20px;">迷う時間を、楽しむ時間に。</h3>
+                    <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">
+                        Norude Sasayamaのデジタルマップは、単なる地図ではありません。<br>
+                        3D地形表示で高低差を確認したり、おすすめの観光ルートをなぞったり。<br>
+                        スマートフォンのGPSと連動し、城下町の路地裏から豊かな自然の中まで、あなたを新しい発見へと導きます。
+                    </p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <span
+                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"><i
+                                class="fas fa-route" style="color: var(--color-primary);"></i> おすすめルート</span>
+                        <span
+                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"><i
+                                class="fas fa-layer-group" style="color: var(--color-primary);"></i> 3D地形表示</span>
+                        <span
+                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"><i
+                                class="fas fa-location-arrow" style="color: var(--color-primary);"></i> 現在地連動</span>
+                    </div>
+                </div>
+                <div class="animate-scroll delay-1"
+                    style="box-shadow: var(--shadow-lg); border-radius: var(--radius-lg); overflow: hidden;">
+                    <iframe id="map" src="https://mapbox-sasayama.vercel.app/" title="丹波篠山サイクリングマップ"
+                        style="border: none; width: 100%; height: 450px;" loading="lazy" allow="geolocation">
+                    </iframe>
+                    <div class="mobile-ride-container" style="padding: 15px; background: white;">
+                        <a id="btn-start-ride" href="https://mapbox-sasayama.vercel.app/?mode=ride" target="_blank"
+                            class="btn btn-primary btn-mobile-ride"
+                            style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-map-marked-alt"></i> マップを全画面で開く
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
