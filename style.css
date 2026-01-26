@@ -693,6 +693,8 @@ footer a:hover {
     /* Simplified mobile nav for now */
     .hero h1 {
         font-size: 2.5rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
     }
 
     .modal-grid {

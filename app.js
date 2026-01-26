@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "nav-mobility": "その他のモビリティ",
             "nav-access": "アクセス",
             "hero-title": "丹波篠山を、<br class='sp-br'>もっと深く、<br class='sp-br'>もっと自由に。",
-            "hero-desc": "時間の制約も、場所の悩みも。すべてを解き放つ、新しい観光のカタチ。",
+            "hero-desc": "時間の制約も、場所の悩みも。<br class='sp-br'>すべてを解き放つ、新しい観光のカタチ。",
             "hero-btn-about": "Norudeで変わる旅",
             "hero-btn-stations": "自転車を探す",
             "why-title": "なぜ「Norude」なのか？",
@@ -88,9 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
             "step-4-desc": "ポートで施錠し、アプリから返却処理を行って完了です。",
             "usage-btn": "詳しい利用ガイドを見る",
             "stations-title": "設置ステーション",
+            "btn-nearest": "現在地から近い順に並べ替え",
+            "location-error": "位置情報の取得に失敗しました",
+            "calculating": "距離を計算中...",
             "manned-title": "その他のレンタサイクル（有人）",
             "manned-desc": "以下の施設では、有人窓口にて自転車の貸出を行っています。<br><span style=\"font-size: 0.9rem; opacity: 0.8;\">※Norude Sasayamaアプリとは別のシステムとなります。詳細はお問い合わせください。</span>",
-            "map-title": "シームレスな観光体験を。",
+            "map-title": "シームレスな<br class='sp-br'>観光体験を。",
             "map-subtitle": "迷う時間を、楽しむ時間に。",
             "map-desc": "Norude Sasayamaのデジタルマップは、単なる地図ではありません。<br>3D地形表示で高低差を確認したり、おすすめの観光ルートをなぞったり。<br>スマートフォンのGPSと連動し、城下町の路地裏から豊かな自然の中まで、あなたを新しい発見へと導きます。",
             "map-badge-route": "おすすめルート",
@@ -141,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "modal-default-type": "普通自転車 / 電動自転車",
             "modal-default-desc": "有人窓口にて貸出を行っています。詳細は直接お問い合わせください。",
             "gallery-title": "丹波篠山の美しさ",
-            "gallery-desc": "日本の原風景が残る場所。季節ごとに表情を変える丹波篠山の景色をお楽しみください。",
+            "gallery-desc": "日本の原風景が残る場所。<br>季節ごとに表情を変える丹波篠山の景色。",
             // Guide Page
             "guide-header-title": "ご利用ガイド",
             "guide-header-desc": "ちょっと楽して大自然を楽しもう！<br>アプリひとつで、丹波篠山の旅がもっと自由に。",
@@ -233,6 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "step-4-desc": "Park at any station, lock the bike, and complete return in the app.",
             "usage-btn": "View Detailed Guide",
             "stations-title": "Bike Stations",
+            "btn-nearest": "Sort by Nearest",
+            "location-error": "Failed to get location",
+            "calculating": "Calculating...",
             "manned-title": "Other Rental Locations (Manned)",
             "manned-desc": "Bikes are also available at the following locations via staff assistance.<br><span style=\"font-size: 0.9rem; opacity: 0.8;\">*Note: These locations use a different system from the Norude app.</span>",
             "map-title": "Seamless Tourism Experience.",
@@ -724,4 +730,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial call for animations (handles static and dynamically added items)
     initAnimations();
+    // Geolocation and Sort Logic
+    const calculateDistance = (lat1, lon1, lat2, lon2) => {
+        const R = 6371; // Earth radius in km
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c; // Distance in km
+    };
+
+    const sortStationsByLocation = () => {
+        const statusEl = document.getElementById('location-status');
+        const btn = document.getElementById('btn-nearest-station');
+
+        if (!navigator.geolocation) {
+            statusEl.textContent = translations[currentLang]["location-error"];
+            return;
+        }
+
+        statusEl.textContent = translations[currentLang]["calculating"];
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLat = position.coords.latitude;
+                const userLng = position.coords.longitude;
+
+                // Sort Managed Stations
+                stations.sort((a, b) => {
+                    const distA = calculateDistance(userLat, userLng, a.coords[1], a.coords[0]);
+                    const distB = calculateDistance(userLat, userLng, b.coords[1], b.coords[0]);
+
+                    // Store distance for potential display
+                    a.distance = distA;
+                    b.distance = distB;
+
+                    return distA - distB;
+                });
+
+                // Sort Manned Stations
+                mannedStations.sort((a, b) => {
+                    const distA = calculateDistance(userLat, userLng, a.coords[1], a.coords[0]);
+                    const distB = calculateDistance(userLat, userLng, b.coords[1], b.coords[0]);
+
+                    a.distance = distA;
+                    b.distance = distB;
+
+                    return distA - distB;
+                });
+
+                // Re-render
+                renderStations('managed-stations', stations, 'fa-parking text-primary');
+                renderStations('manned-stations', mannedStations, 'fa-bicycle text-secondary');
+
+                statusEl.textContent = "";
+                btn.disabled = false;
+                btn.style.opacity = '1';
+
+                // Add distance info to rendered items (Optional enhancement)
+                // This would require modifying renderStations or doing a post-render update.
+                // For now, sorting is the primary request.
+            },
+            (error) => {
+                console.error("Geolocation error:", error);
+                statusEl.textContent = translations[currentLang]["location-error"];
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }
+        );
+    };
+
+    const btnNearest = document.getElementById('btn-nearest-station');
+    if (btnNearest) {
+        btnNearest.addEventListener('click', sortStationsByLocation);
+    }
 });
