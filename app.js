@@ -140,6 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "modal-confirm-on-site": "現地にて確認",
             "modal-default-type": "普通自転車 / 電動自転車",
             "modal-default-desc": "有人窓口にて貸出を行っています。詳細は直接お問い合わせください。",
+            "gallery-title": "丹波篠山の美しさ",
+            "gallery-desc": "日本の原風景が残る場所。季節ごとに表情を変える丹波篠山の景色をお楽しみください。",
             // Guide Page
             "guide-header-title": "ご利用ガイド",
             "guide-header-desc": "ちょっと楽して大自然を楽しもう！<br>アプリひとつで、丹波篠山の旅がもっと自由に。",
@@ -283,6 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "modal-confirm-on-site": "Check on-site",
             "modal-default-type": "Standard / Electric Assist",
             "modal-default-desc": "Service provided via manned counter. Please contact them directly for details.",
+            "gallery-title": "Beauty of Tamba Sasayama",
+            "gallery-desc": "A place where the original landscape of Japan remains. Enjoy the scenery of Tamba Sasayama that changes with each season.",
             // Guide Page
             "guide-header-title": "Usage Guide",
             "guide-header-desc": "Effortless exploration in the heart of nature.<br>Your journey in Tamba Sasayama starts with just one app.",
