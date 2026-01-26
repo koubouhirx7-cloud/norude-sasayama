@@ -151,11 +151,11 @@
                 <img src="assets/logo.png" alt="Norude Sasayama" style="height: 50px; width: auto;">
             </a>
             <div class="nav-links">
-                <a href="index.html#about">システムについて</a>
-                <a href="guide.html" class="active">利用ガイド</a>
-                <a href="index.html#stations">ステーション</a>
-                <a href="index.html#mobility">その他のモビリティ</a>
-                <a href="index.html#access">アクセス</a>
+                <a href="index.html#about" data-i18n="nav-about">システムについて</a>
+                <a href="guide.html" class="active" data-i18n="nav-guide">利用ガイド</a>
+                <a href="index.html#stations" data-i18n="nav-stations">ステーション</a>
+                <a href="index.html#mobility" data-i18n="nav-mobility">その他のモビリティ</a>
+                <a href="index.html#access" data-i18n="nav-access">アクセス</a>
             </div>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -168,8 +168,8 @@
     <!-- Header -->
     <header class="guide-header">
         <div class="container">
-            <h1 class="section-title">ご利用ガイド</h1>
-            <p style="margin-bottom: 32px;">ちょっと楽して大自然を楽しもう！<br>アプリひとつで、丹波篠山の旅がもっと自由に。</p>
+            <h1 class="section-title" data-i18n="guide-header-title">ご利用ガイド</h1>
+            <p style="margin-bottom: 32px;" data-i18n="guide-header-desc">ちょっと楽して大自然を楽しもう！<br>アプリひとつで、丹波篠山の旅がもっと自由に。</p>
 
             <div class="flex-center" style="gap: 16px; flex-wrap: wrap;">
                 <a href="https://apps.apple.com/jp/app/rideblink-bike-sharing/id6444598723" target="_blank" class="btn"
@@ -196,21 +196,21 @@
     <section class="section-padding">
         <div class="container">
             <div class="price-card animate-scroll">
-                <h2 class="text-center" style="margin-bottom: 16px;">ご利用料金</h2>
-                <p class="text-center text-secondary">シンプルで使いやすい料金体系 <span
+                <h2 class="text-center" style="margin-bottom: 16px;" data-i18n="price-title">ご利用料金</h2>
+                <p class="text-center text-secondary" data-i18n="price-subtitle">シンプルで使いやすい料金体系 <span
                         style="font-size: 0.8rem; opacity: 0.8;">（一部例外あり）</span></p>
 
                 <div class="price-grid">
                     <div class="price-item">
                         <div class="price-value">¥800</div>
-                        <div class="price-label">3時間まで</div>
+                        <div class="price-label" data-i18n="price-3h-label">3時間まで</div>
                     </div>
                     <div class="price-item">
                         <div class="price-value">¥1,500</div>
-                        <div class="price-label">翌日午前9時まで</div>
+                        <div class="price-label" data-i18n="price-daily-label">翌日午前9時まで</div>
                     </div>
                 </div>
-                <p class="text-center text-sm text-secondary mt-4">
+                <p class="text-center text-sm text-secondary mt-4" data-i18n="price-note">
                     ※翌日以降は同じ料金サイクルで繰り返されます<br>
                     <span
                         style="font-size: 0.85rem; opacity: 0.8;">※NIPPONIA、観光協会等の各ステーションは料金体系が異なります。詳細は現地にてご確認ください。</span>
@@ -219,8 +219,8 @@
                 <div
                     style="margin-top: 32px; padding: 24px; border-radius: var(--radius-md); background: #fff8e1; border: 1px solid #ffe082;">
                     <p style="font-size: 0.9rem; color: #856404;">
-                        <strong>＜安心の10分間無料＞</strong><br>
-                        間違えて借りてしまったり、自転車を変更したい場合も、最初の10分間は無料ですのでご安心ください。
+                        <strong data-i18n="price-trial-title">＜安心の10分間無料＞</strong><br>
+                        <span data-i18n="price-trial-desc">間違えて借りてしまったり、自転車を変更したい場合も、最初の10分間は無料ですのでご安心ください。</span>
                     </p>
                 </div>
             </div>
@@ -230,20 +230,20 @@
     <!-- Steps Section -->
     <section class="step-section" style="background: white;">
         <div class="container">
-            <h2 class="section-title">ご利用の流れ</h2>
+            <h2 class="section-title" data-i18n="usage-title">ご利用の流れ</h2>
 
             <!-- Step 0: Preparation -->
             <div class="step-item animate-scroll">
                 <div class="step-number">01</div>
                 <div class="step-content">
-                    <h3>ご利用の準備</h3>
-                    <p>まずはアプリをダウンロードして、ユーザー登録を完了させましょう。</p>
+                    <h3 data-i18n="step-0-title">ご利用の準備</h3>
+                    <p data-i18n="step-0-desc">まずはアプリをダウンロードして、ユーザー登録を完了させましょう。</p>
                     <div class="step-detail-card">
-                        <h4><i class="fas fa-download"></i> アプリの準備</h4>
+                        <h4><i class="fas fa-download"></i> <span data-i18n="step-0-detail-title">アプリの準備</span></h4>
                         <ul>
-                            <li>App StoreまたはGoogle Playからアプリをダウンロードします。</li>
-                            <li>Bluetoothと位置情報の許可を必ず「許可」に設定してください。</li>
-                            <li>新規ユーザー登録を行い、決済用のクレジットカード情報を登録します。</li>
+                            <li data-i18n="step-0-detail-1">App StoreまたはGoogle Playからアプリをダウンロードします。</li>
+                            <li data-i18n="step-0-detail-2">Bluetoothと位置情報の許可を必ず「許可」に設定してください。</li>
+                            <li data-i18n="step-0-detail-3">新規ユーザー登録を行い、決済用のクレジットカード情報を登録します。</li>
                         </ul>
                         <div style="margin-top: 20px; text-align: center;">
                             <img src="assets/guide_register.png" alt="新規登録画面"
@@ -257,14 +257,14 @@
             <div class="step-item animate-scroll">
                 <div class="step-number">02</div>
                 <div class="step-content">
-                    <h3>自転車を借りる</h3>
-                    <p>ステーションに到着したら、アプリから簡単に利用を開始できます。</p>
+                    <h3 data-i18n="step-2-title">自転車を借りる</h3>
+                    <p data-i18n="step-2-desc">ステーションに到着したら、アプリから簡単に利用を開始できます。</p>
                     <div class="step-detail-card">
-                        <h4><i class="fas fa-qrcode"></i> 借り方の詳細</h4>
+                        <h4><i class="fas fa-qrcode"></i> <span data-i18n="step-1-detail-title">借り方の詳細</span></h4>
                         <ul>
-                            <li>アプリの「スキャン」をタップします。</li>
-                            <li>自転車に貼ってあるQRコードを読み込みます。</li>
-                            <li>「あける」を選択して自転車を解錠します。</li>
+                            <li data-i18n="step-1-detail-1">アプリの「スキャン」をタップします。</li>
+                            <li data-i18n="step-1-detail-2">自転車に貼ってあるQRコードを読み込みます。</li>
+                            <li data-i18n="step-1-detail-3">「あける」を選択して自転車を解錠します。</li>
                         </ul>
                         <div
                             style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
@@ -287,12 +287,12 @@
             <div class="step-item animate-scroll">
                 <div class="step-number">03</div>
                 <div class="step-content">
-                    <h3>自転車に乗る・一時駐輪</h3>
-                    <p>観光やお買い物での一時的な駐輪も可能です。施錠は手動で行います。</p>
+                    <h3 data-i18n="step-3-title">自転車に乗る・一時駐輪</h3>
+                    <p data-i18n="step-3-desc">観光やお買い物での一時的な駐輪も可能です。施錠は手動で行います。</p>
                     <div class="step-detail-card">
-                        <h4><i class="fas fa-lock"></i> 鍵の施錠と解錠</h4>
+                        <h4><i class="fas fa-lock"></i> <span data-i18n="step-2-detail-title">鍵の施錠と解錠</span></h4>
                         <ul>
-                            <li><strong>再開（解錠）：</strong>アプリから「あける」を選択すると再び解錠されます。</li>
+                            <li data-i18n="step-2-detail-1"><strong>再開（解錠）：</strong>アプリから「あける」を選択すると再び解錠されます。</li>
                         </ul>
                         <div
                             style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
@@ -315,15 +315,15 @@
             <div class="step-item animate-scroll">
                 <div class="step-number">04</div>
                 <div class="step-content">
-                    <h3>自転車を返却する</h3>
-                    <p>最寄りのステーションに戻り、返却手続きを完了させます。</p>
+                    <h3 data-i18n="step-4-title">自転車を返却する</h3>
+                    <p data-i18n="step-4-desc">最寄りのステーションに戻り、返却手続きを完了させます。</p>
                     <div class="step-detail-card">
-                        <h4><i class="fas fa-check-circle"></i> 返却の手順</h4>
+                        <h4><i class="fas fa-check-circle"></i> <span data-i18n="step-3-detail-title">返却の手順</span></h4>
                         <ul>
-                            <li>指定のステーションに駐輪します。</li>
-                            <li>手動で鍵を施錠します。</li>
-                            <li>アプリの「返却」ボタンをタップし、次に「OK」をタップします。</li>
-                            <li>このボタンを押した時間で精算金額が確定されます。</li>
+                            <li data-i18n="step-3-detail-1">指定のステーションに駐輪します。</li>
+                            <li data-i18n="step-3-detail-2">手動で鍵を施錠します。</li>
+                            <li data-i18n="step-3-detail-3">アプリの「返却」ボタンをタップし、次に「OK」をタップします。</li>
+                            <li data-i18n="step-3-detail-4">このボタンを押した時間で精算金額が確定されます。</li>
                         </ul>
                         <div style="margin-top: 20px; text-align: center;">
                             <img src="assets/guide_return_app.png" alt="返却画面"
@@ -338,11 +338,12 @@
                 <div class="step-number" style="background: var(--color-secondary);"><i class="fas fa-credit-card"></i>
                 </div>
                 <div class="step-content">
-                    <h3>お支払い方法</h3>
-                    <p>面倒な現金支払いは不要。スマートに決済が完了します。</p>
+                    <h3 data-i18n="payment-title">お支払い方法</h3>
+                    <p data-i18n="payment-desc">面倒な現金支払いは不要. スマートに決済が完了します。</p>
                     <div class="step-detail-card" style="background: rgba(26, 77, 46, 0.05);">
-                        <h4><i class="fas fa-shield-alt"></i> クレジットカード決済</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 0;">
+                        <h4><i class="fas fa-shield-alt"></i> <span data-i18n="payment-card-title">クレジットカード決済</span>
+                        </h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;" data-i18n="payment-card-desc">
                             ご利用料金は、あらかじめアプリにご登録いただいたクレジットカードからの自動引き落としとなります。<br>
                             利用履歴はアプリ内からいつでもご確認いただけます。
                         </p>
@@ -358,8 +359,8 @@
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
                 <div>
-                    <h3>Norude Sasayama</h3>
-                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;">
+                    <h3 data-i18n="footer-title">Norude Sasayama</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;" data-i18n="footer-desc">
                         丹波篠山市の持続可能な観光と生活を支える<br>
                         次世代モビリティネットワーク
                     </p>
@@ -367,11 +368,13 @@
                         <!-- Project Owner -->
                         <div style="margin-bottom: 20px;">
                             <span
-                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; display: inline-block; margin-bottom: 4px;">事業主体</span><br>
-                            <span
-                                style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 4px;">丹波篠山市
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; display: inline-block; margin-bottom: 4px;"
+                                data-i18n="footer-owner-label">事業主体</span><br>
+                            <span style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 4px;"
+                                data-i18n="footer-owner-name">丹波篠山市
                                 商工観光課</span>
-                            <span style="font-size: 0.8rem; display: block; opacity: 0.8;">
+                            <span style="font-size: 0.8rem; display: block; opacity: 0.8;"
+                                data-i18n="footer-owner-address">
                                 〒669-2397 兵庫県丹波篠山市北新町41<br>
                                 Tel 079-552-1111 / Fax 079-552-5665
                             </span>
@@ -380,38 +383,43 @@
                         <!-- Operation -->
                         <div style="margin-bottom: 12px; display: flex; align-items: baseline; gap: 10px;">
                             <span
-                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap;">運営・管理</span>
-                            <span>ハイランダー / 里山の自転車店</span>
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap;"
+                                data-i18n="footer-operation-label">運営・管理</span>
+                            <span data-i18n="footer-operation-name">ハイランダー / 里山の自転車店</span>
                         </div>
 
                         <!-- System -->
                         <div style="display: flex; align-items: baseline; gap: 10px;">
                             <span
-                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap; align-self: flex-start; margin-top: 3px;">システム</span>
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap; align-self: flex-start; margin-top: 3px;"
+                                data-i18n="footer-system-label">システム</span>
                             <div>
-                                神戸大学発認定ベンチャー<br>
-                                株式会社bLink Technologies
+                                <span data-i18n="footer-system-company-line1">神戸大学発認定ベンチャー</span><br>
+                                <span data-i18n="footer-system-company-line2">株式会社bLink Technologies</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div style="min-width: 250px;">
-                    <h4>Links & Contact</h4>
+                    <h4 data-i18n="footer-links-title">Links & Contact</h4>
                     <ul style="list-style: none; margin-top: 10px;">
-                        <li style="margin-bottom: 8px;"><a href="index.html">ホーム</a></li>
-                        <li style="margin-bottom: 8px;"><a href="guide.html">利用ガイド</a></li>
-                        <li style="margin-bottom: 8px;"><a href="terms.html">利用規約</a></li>
+                        <li style="margin-bottom: 8px;"><a href="index.html" data-i18n="footer-link-home">ホーム</a></li>
+                        <li style="margin-bottom: 8px;"><a href="guide.html" data-i18n="footer-link-guide">利用ガイド</a>
+                        </li>
+                        <li style="margin-bottom: 8px;"><a href="terms.html" data-i18n="footer-link-terms">利用規約</a></li>
                         <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <span style="font-weight: 700; color: white; display: block; margin-bottom: 8px;"
+                                data-i18n="footer-contact-title">お問い合わせ</span>
                             <span
-                                style="font-weight: 700; color: white; display: block; margin-bottom: 8px;">お問い合わせ</span>
-                            <span
-                                style="font-size: 0.85rem; color: rgba(255,255,255,0.7); display: block; margin-bottom: 12px;">
+                                style="font-size: 0.85rem; color: rgba(255,255,255,0.7); display: block; margin-bottom: 12px;"
+                                data-i18n="footer-contact-info">
                                 丹波篠山市 商工観光課<br>
                                 Tel: 079-552-1111（代表）
                             </span>
                             <a href="https://www.city.tambasasayama.lg.jp/soshikikarasagasu/shokokankoka/index.html"
                                 target="_blank" class="btn"
-                                style="background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center; border: 1px solid rgba(255,255,255,0.2);">
+                                style="background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center; border: 1px solid rgba(255,255,255,0.2);"
+                                data-i18n="footer-contact-btn">
                                 <i class="fas fa-external-link-alt"></i> 市・商工観光課サイト
                             </a>
                         </li>
@@ -420,7 +428,7 @@
             </div>
             <div
                 style="text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-                <p>&copy; 2026 Norude Sasayama. All Rights Reserved.</p>
+                <p data-i18n="footer-copyright">&copy; 2026 Norude Sasayama. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

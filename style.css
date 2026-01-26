@@ -172,6 +172,51 @@ a {
     width: 100%;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-left: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-light);
+    padding: 2px 4px;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.lang-btn.active {
+    color: var(--color-primary);
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--color-text);
+}
+
+.lang-divider {
+    color: #cbd5e1;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+}
+
 /* Hamburger Menu */
 .menu-toggle {
     display: none;

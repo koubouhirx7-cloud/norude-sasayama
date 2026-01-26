@@ -25,12 +25,12 @@
                 <img src="assets/logo.png" alt="Norude Sasayama" style="height: 50px; width: auto;">
             </a>
             <div class="nav-links">
-                <a href="#about">システムについて</a>
-                <a href="guide.html">利用ガイド</a>
-                <a href="terms.html">利用規約</a>
-                <a href="#stations">ステーション</a>
-                <a href="#mobility">その他のモビリティ</a>
-                <a href="#access">アクセス</a>
+                <a href="#about" data-i18n="nav-about">システムについて</a>
+                <a href="guide.html" data-i18n="nav-guide">利用ガイド</a>
+                <a href="terms.html" data-i18n="nav-terms">利用規約</a>
+                <a href="#stations" data-i18n="nav-stations">ステーション</a>
+                <a href="#other-mobility" data-i18n="nav-mobility">その他のモビリティ</a>
+                <a href="#access" data-i18n="nav-access">アクセス</a>
             </div>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -43,11 +43,12 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content animate-up">
-            <h1>丹波篠山を、もっと深く、もっと自由に。</h1>
-            <p>時間の制約も、場所の悩みも。すべてを解き放つ、新しい観光のカタチ。</p>
+            <h1 data-i18n="hero-title">丹波篠山を、もっと深く、もっと自由に。</h1>
+            <p data-i18n="hero-desc">時間の制約も、場所の悩みも。すべてを解き放つ、新しい観光のカタチ。</p>
             <div style="display: flex; gap: 16px; justify-content: center;">
-                <a href="#about" class="btn btn-primary">Norudeで変わる旅</a>
-                <a href="#stations" class="btn" style="background: white; color: var(--color-text);">自転車を探す</a>
+                <a href="#about" class="btn btn-primary" data-i18n="hero-btn-about">Norudeで変わる旅</a>
+                <a href="#stations" class="btn" style="background: white; color: var(--color-text);"
+                    data-i18n="hero-btn-stations">自転車を探す</a>
             </div>
 
             <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
@@ -75,60 +76,48 @@
     <!-- Why Norude Section (Problem/Solution) -->
     <section id="about" class="section-padding story-section">
         <div class="container">
-            <h2 class="section-title">なぜ「Norude」なのか？</h2>
-            <p class="text-center text-secondary mb-32">
+            <h2 class="section-title" data-i18n="why-title">なぜ「Norude」なのか？</h2>
+            <p class="text-center text-secondary mb-32" data-i18n="why-desc">
                 これまでのレンタサイクルで感じていたストレスを、最新のシステムが解決します。
             </p>
 
             <div class="problem-solution-grid">
                 <!-- Problems -->
                 <div class="problem-area animate-scroll">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 24px; color: #64748b;">これまでのレンタサイクル</h3>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 24px; color: #64748b;" data-i18n="prob-old">
+                        これまでのレンタサイクル</h3>
                     <div class="problem-item">
                         <i class="fas fa-times-circle"></i>
                         <div>
-                            <strong>時間の制限</strong>
-                            <p>「17時までに返さないと…」閉館時間を気にして、観光を切り上げる必要がありました。</p>
+                            <strong data-i18n="prob-time-title">時間の制限</strong>
+                            <p data-i18n="prob-time-desc">「17時までに返さないと…」閉館時間を気にして、観光を切り上げる必要がありました。</p>
                         </div>
                     </div>
                     <div class="problem-item">
                         <i class="fas fa-times-circle"></i>
                         <div>
-                            <strong>手続きの煩わしさ</strong>
-                            <p>窓口での書類記入や、現金でのやり取り。出発までに時間がかかっていました。</p>
-                        </div>
-                    </div>
-                    <div class="problem-item">
-                        <i class="fas fa-times-circle"></i>
-                        <div>
-                            <strong>返却場所の固定</strong>
-                            <p>借りた場所まで戻らなければならず、ルートが限定されていました。</p>
+                            <strong data-i18n="prob-paper-title">手続きの煩わしさ</strong>
+                            <p data-i18n="prob-paper-desc">窓口での書類記入や、現金でのやり取り。出発までに時間がかかっていました。</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Solutions -->
                 <div class="solution-area animate-scroll delay-1">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 24px; color: var(--color-primary);">これからの「Norude」</h3>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 24px; color: var(--color-primary);"
+                        data-i18n="sol-new">これからの「Norude」</h3>
                     <div class="solution-item">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <strong>24時間、いつでも。</strong>
-                            <p>早朝の澄んだ空気の中も、夕暮れ時の情緒ある街並みも。あなたの時間で楽しめます。</p>
+                            <strong data-i18n="sol-time-title">24時間、いつでも。</strong>
+                            <p data-i18n="sol-time-desc">早朝の澄んだ空気の中も、夕暮れ時の情緒ある街並みも。あなたの時間で楽しめます。</p>
                         </div>
                     </div>
                     <div class="solution-item">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <strong>スマホで30秒出発。</strong>
-                            <p>アプリでQRを読み取るだけ。キャッシュレス決済で、思い立った瞬間に旅が始まります。</p>
-                        </div>
-                    </div>
-                    <div class="solution-item">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <strong>どこでも返却可能。</strong>
-                            <p>市内に点在するステーションならどこでも返却OK。目的地に合わせた片道利用も自由自在。</p>
+                            <strong data-i18n="sol-app-title">スマホで30秒出発。</strong>
+                            <p data-i18n="sol-app-desc">アプリでQRを読み取るだけ。キャッシュレス決済で、思い立った瞬間に旅が始まります。</p>
                         </div>
                     </div>
                 </div>
@@ -140,70 +129,63 @@
     <section id="usage-steps" class="section-padding"
         style="background: linear-gradient(rgba(26, 77, 46, 0.03), rgba(26, 77, 46, 0.08));">
         <div class="container">
-            <h2 class="section-title">ご利用の流れ</h2>
-            <p class="text-center text-secondary mb-32" style="margin-bottom: 48px;">
+            <h2 class="section-title" data-i18n="usage-title">ご利用の流れ</h2>
+            <p class="text-center text-secondary mb-32" style="margin-bottom: 48px;" data-i18n="usage-desc">
                 初めての方でも安心。4つのステップで簡単にご利用いただけます。
             </p>
 
             <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
                 <!-- Step 1 -->
                 <div class="feature-card animate-scroll" style="text-align: center;">
-                    <div class="step-icon-circle"
-                        style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: var(--shadow-sm); color: var(--color-primary); font-size: 2rem;">
-                        <i class="fas fa-mobile-screen"></i>
-                    </div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">1. アプリ登録</h3>
-                    <p style="font-size: 0.95rem;">アプリをDLして、クレジットカード情報などを登録します。</p>
+                    <div class="step-icon">1</div>
+                    <h3 data-i18n="step-1-title">アプリ登録</h3>
+                    <p data-i18n="step-1-desc">アプリをDLして、クレジットカード情報などを登録します。</p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="feature-card animate-scroll delay-1" style="text-align: center;">
-                    <div class="step-icon-circle"
-                        style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: var(--shadow-sm); color: var(--color-primary); font-size: 2rem;">
-                        <i class="fas fa-qrcode"></i>
-                    </div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">2. 借りる</h3>
-                    <p style="font-size: 0.95rem;">自転車のQRコードをアプリで読み取ると解錠されます。</p>
+                    <div class="step-icon">2</div>
+                    <h3 data-i18n="step-2-title">借りる</h3>
+                    <p data-i18n="step-2-desc">自転車のQRコードをアプリで読み取ると解錠されます。</p>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="feature-card animate-scroll delay-2" style="text-align: center;">
-                    <div class="step-icon-circle"
-                        style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: var(--shadow-sm); color: var(--color-primary); font-size: 2rem;">
-                        <i class="fas fa-bicycle"></i>
-                    </div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">3. 乗る</h3>
-                    <p style="font-size: 0.95rem;">自由に移動。途中での一時駐輪も可能です（手動施錠）。</p>
+                    <div class="step-icon">3</div>
+                    <h3 data-i18n="step-3-title">乗る</h3>
+                    <p data-i18n="step-3-desc">自由に移動。途中での一時駐輪も可能です（手動施錠）。</p>
                 </div>
 
                 <!-- Step 4 -->
                 <div class="feature-card animate-scroll delay-3" style="text-align: center;">
-                    <div class="step-icon-circle"
-                        style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: var(--shadow-sm); color: var(--color-primary); font-size: 2rem;">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">4. 返却</h3>
-                    <p style="font-size: 0.95rem;">ポートで施錠し、アプリから返却処理を行って完了です。</p>
+                    <div class="step-icon">4</div>
+                    <h3 data-i18n="step-4-title">返却</h3>
+                    <p data-i18n="step-4-desc">ポートで施錠し、アプリから返却処理を行って完了です。</p>
                 </div>
             </div>
 
             <div class="text-center" style="margin-top: 48px;">
-                <a href="guide.html" class="btn btn-primary">詳しい利用ガイドを見る</a>
+                <a href="guide.html" class="btn btn-primary" data-i18n="usage-btn">詳しい利用ガイドを見る</a>
             </div>
         </div>
     </section>
     <section id="stations" class="section-padding" style="background: var(--color-bg);">
         <div class="container">
-            <h2 class="section-title">設置ステーション</h2>
+            <h2 class="section-title" data-i18n="stations-title">設置ステーション</h2>
             <div class="station-list" id="managed-stations">
                 <!-- Javascript will render this -->
             </div>
 
-            <h3 class="section-title" style="margin-top: 64px; font-size: 1.8rem;">その他のレンタサイクル（有人）</h3>
-            <p class="text-center text-secondary mb-32" style="margin-bottom: 32px;">
-                以下の施設では、有人窓口にて自転車の貸出を行っています。<br>
-                <span style="font-size: 0.9rem; opacity: 0.8;">※Norude Sasayamaアプリとは別のシステムとなります。詳細はお問い合わせください。</span>
-            </p>
+            <div class="manned-info animate-scroll" style="margin-top: 64px;">
+                <h3 style="font-size: 1.4rem; color: var(--color-secondary); margin-bottom: 15px;"
+                    data-i18n="manned-title">
+                    その他のレンタサイクル（有人）</h3>
+                <p class="text-center text-secondary mb-32" style="margin-bottom: 32px;" data-i18n="manned-desc">
+                    以下の施設では、有人窓口にて自転車の貸出を行っています。<br>
+                    <span style="font-size: 0.9rem; opacity: 0.8;">※Norude
+                        Sasayamaアプリとは別のシステムとなります。詳細はお問い合わせください。</span>
+                </p>
+            </div>
             <div class="station-list" id="manned-stations">
                 <!-- Javascript will render this -->
             </div>
@@ -215,26 +197,30 @@
     <!-- Map Section -->
     <section id="map-section" class="section-padding" style="background: var(--color-bg);">
         <div class="container">
-            <h2 class="section-title">シームレスな観光体験を。</h2>
+            <h2 class="section-title" data-i18n="map-title">シームレスな観光体験を。</h2>
 
             <div class="map-story-content">
                 <div class="animate-scroll">
-                    <h3 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 20px;">迷う時間を、楽しむ時間に。</h3>
-                    <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">
+                    <h3 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 20px;"
+                        data-i18n="map-subtitle">迷う時間を、楽しむ時間に。</h3>
+                    <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 24px;" data-i18n="map-desc">
                         Norude Sasayamaのデジタルマップは、単なる地図ではありません。<br>
                         3D地形表示で高低差を確認したり、おすすめの観光ルートをなぞったり。<br>
                         スマートフォンのGPSと連動し、城下町の路地裏から豊かな自然の中まで、あなたを新しい発見へと導きます。
                     </p>
                     <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                         <span
-                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"><i
-                                class="fas fa-route" style="color: var(--color-primary);"></i> おすすめルート</span>
+                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"
+                            data-i18n="map-badge-route"><i class="fas fa-route"
+                                style="color: var(--color-primary);"></i> おすすめルート</span>
                         <span
-                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"><i
-                                class="fas fa-layer-group" style="color: var(--color-primary);"></i> 3D地形表示</span>
+                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"
+                            data-i18n="map-badge-3d"><i class="fas fa-layer-group"
+                                style="color: var(--color-primary);"></i> 3D地形表示</span>
                         <span
-                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"><i
-                                class="fas fa-location-arrow" style="color: var(--color-primary);"></i> 現在地連動</span>
+                            style="background: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; box-shadow: var(--shadow-sm);"
+                            data-i18n="map-badge-gps"><i class="fas fa-location-arrow"
+                                style="color: var(--color-primary);"></i> 現在地連動</span>
                     </div>
                 </div>
                 <div class="animate-scroll delay-1"
@@ -245,7 +231,8 @@
                     <div class="mobile-ride-container" style="padding: 15px; background: white;">
                         <a id="btn-start-ride" href="https://mapbox-sasayama.vercel.app/?mode=ride" target="_blank"
                             class="btn btn-primary btn-mobile-ride"
-                            style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;"
+                            data-i18n="map-btn">
                             <i class="fas fa-map-marked-alt"></i> マップを全画面で開く
                         </a>
                     </div>
@@ -255,21 +242,23 @@
     </section>
 
     <!-- Other Mobility -->
-    <section id="mobility" class="section-padding">
+    <section id="other-mobility" class="section-padding">
         <div class="container">
-            <h2 class="section-title">その他の移動手段</h2>
+            <h2 class="section-title" data-i18n="mobility-title">その他の移動手段</h2>
 
             <!-- Electric TukTuk -->
             <div class="mobility-card animate-scroll">
                 <div class="mobility-img" style="background-image: url('assets/tuk-tuk.webp');">
                 </div>
                 <div class="mobility-content">
-                    <h3 class="text-primary" style="font-size: 1.8rem; margin-bottom: 16px;">電動トゥクトゥク</h3>
-                    <p style="margin-bottom: 24px;">
+                    <h3 class="text-primary" style="font-size: 1.8rem; margin-bottom: 16px;" data-i18n="tuk-tuk-title">
+                        電動トゥクトゥク</h3>
+                    <p style="margin-bottom: 24px;" data-i18n="tuk-tuk-desc">
                         風を感じながら、城下町をゆったり巡る。3人乗りの電動トゥクトゥクで、特別な移動体験を。<br>
                         普通自動車免許で運転可能。静かでエコな乗り物です。
                     </p>
-                    <a href="https://www.tuktuk-tmba.com" target="_blank" class="btn btn-primary">詳細を見る</a>
+                    <a href="https://www.tuktuk-tmba.com" target="_blank" class="btn btn-primary"
+                        data-i18n="tuk-tuk-btn">詳細を見る</a>
                 </div>
             </div>
 
@@ -278,13 +267,14 @@
                 <div class="mobility-img" style="background-image: url('assets/norina.jpg');">
                 </div>
                 <div class="mobility-content">
-                    <h3 class="text-primary" style="font-size: 1.8rem; margin-bottom: 16px;">Norina Sasayama</h3>
-                    <p style="margin-bottom: 24px;">
+                    <h3 class="text-primary" style="font-size: 1.8rem; margin-bottom: 16px;" data-i18n="norina-title">
+                        Norina Sasayama</h3>
+                    <p style="margin-bottom: 24px;" data-i18n="norina-desc">
                         AIデマンド交通システム。リクエストに合わせて最適なルートで運行します。<br>
                         バス停まで歩くことなく、指定の場所で乗り降り可能。地域住民や観光客の足として活躍します。
                     </p>
                     <a href="https://www.city.tambasasayama.lg.jp/soshikikarasagasu/sozoutoshika/tambasasayamasozokakari/public_transportation/26964.html"
-                        target="_blank" class="btn btn-primary">利用方法はこちら</a>
+                        target="_blank" class="btn btn-primary" data-i18n="norina-btn">利用方法はこちら</a>
                 </div>
             </div>
 
@@ -294,8 +284,8 @@
     <!-- Access & Tourism Section -->
     <section id="access" class="section-padding" style="background: white;">
         <div class="container">
-            <h2 class="section-title">アクセス & 観光情報</h2>
-            <p class="text-center text-secondary mb-32" style="margin-bottom: 48px;">
+            <h2 class="section-title" data-i18n="access-title">アクセス & 観光情報</h2>
+            <p class="text-center text-secondary mb-32" style="margin-bottom: 48px;" data-i18n="access-desc">
                 丹波篠山市へのアクセス方法と、街の魅力を知るための観光ガイド。
             </p>
 
@@ -303,13 +293,13 @@
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start;">
                 <!-- Transportation -->
                 <div class="feature-card animate-scroll">
-                    <h3
-                        style="color: var(--color-primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"
+                        data-i18n="access-train-title">
                         <i class="fas fa-train"></i> 電車でのアクセス
                     </h3>
                     <div style="border-left: 2px solid var(--color-secondary); padding-left: 20px;">
-                        <p style="font-weight: 700; margin-bottom: 8px;">JR 篠山口駅</p>
-                        <p style="font-size: 0.95rem; color: var(--color-text-light);">
+                        <p style="font-weight: 700; margin-bottom: 8px;" data-i18n="access-train-station">JR 篠山口駅</p>
+                        <p style="font-size: 0.95rem; color: var(--color-text-light);" data-i18n="access-train-desc">
                             JR宝塚線（福知山線）「大阪駅」から丹波路快速で約70分。<br>
                             駅東口にレンタサイクルポートがございます。
                         </p>
@@ -319,12 +309,13 @@
                 <!-- Tourism Link -->
                 <div class="feature-card animate-scroll delay-1"
                     style="background: linear-gradient(135deg, var(--color-primary), #2d7a46); color: white;">
-                    <h3 style="color: white; margin-bottom: 16px;">丹波篠山をより深く知る</h3>
-                    <p style="margin-bottom: 24px; opacity: 0.9; font-size: 0.95rem;">
+                    <h3 style="color: white; margin-bottom: 16px;" data-i18n="access-tourism-title">丹波篠山をより深く知る</h3>
+                    <p style="margin-bottom: 24px; opacity: 0.9; font-size: 0.95rem;" data-i18n="access-tourism-desc">
                         歴史ある城下町、豊かな自然、美味しい特産品。丹波篠山の最新の観光情報は公式ガイドをご確認ください。
                     </p>
                     <a href="https://tourism.sasayama.jp/" target="_blank" class="btn"
-                        style="background: white; color: var(--color-primary); width: 100%; text-align: center; font-weight: 700;">
+                        style="background: white; color: var(--color-primary); width: 100%; text-align: center; font-weight: 700;"
+                        data-i18n="access-tourism-btn">
                         <i class="fas fa-external-link-alt"></i> 丹波篠山 観光ガイド
                     </a>
                 </div>
@@ -337,8 +328,8 @@
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
                 <div>
-                    <h3>Norude Sasayama</h3>
-                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;">
+                    <h3 data-i18n="footer-title">Norude Sasayama</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;" data-i18n="footer-desc">
                         丹波篠山市の持続可能な観光と生活を支える<br>
                         次世代モビリティネットワーク
                     </p>
@@ -346,11 +337,13 @@
                         <!-- Project Owner -->
                         <div style="margin-bottom: 20px;">
                             <span
-                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; display: inline-block; margin-bottom: 4px;">事業主体</span><br>
-                            <span
-                                style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 4px;">丹波篠山市
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; display: inline-block; margin-bottom: 4px;"
+                                data-i18n="footer-owner-label">事業主体</span><br>
+                            <span style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 4px;"
+                                data-i18n="footer-owner-name">丹波篠山市
                                 商工観光課</span>
-                            <span style="font-size: 0.8rem; display: block; opacity: 0.8;">
+                            <span style="font-size: 0.8rem; display: block; opacity: 0.8;"
+                                data-i18n="footer-owner-address">
                                 〒669-2397 兵庫県丹波篠山市北新町41<br>
                                 Tel 079-552-1111 / Fax 079-552-5665
                             </span>
@@ -359,38 +352,43 @@
                         <!-- Operation -->
                         <div style="margin-bottom: 12px; display: flex; align-items: baseline; gap: 10px;">
                             <span
-                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap;">運営・管理</span>
-                            <span>ハイランダー / 里山の自転車店</span>
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap;"
+                                data-i18n="footer-operation-label">運営・管理</span>
+                            <span data-i18n="footer-operation-name">ハイランダー / 里山の自転車店</span>
                         </div>
 
                         <!-- System -->
                         <div style="display: flex; align-items: baseline; gap: 10px;">
                             <span
-                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap; align-self: flex-start; margin-top: 3px;">システム</span>
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap; align-self: flex-start; margin-top: 3px;"
+                                data-i18n="footer-system-label">システム</span>
                             <div>
-                                神戸大学発認定ベンチャー<br>
-                                株式会社bLink Technologies
+                                <span data-i18n="footer-system-company-line1">神戸大学発認定ベンチャー</span><br>
+                                <span data-i18n="footer-system-company-line2">株式会社bLink Technologies</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div style="min-width: 250px;">
-                    <h4>Links & Contact</h4>
+                    <h4 data-i18n="footer-links-title">Links & Contact</h4>
                     <ul style="list-style: none; margin-top: 10px;">
-                        <li style="margin-bottom: 8px;"><a href="index.html">ホーム</a></li>
-                        <li style="margin-bottom: 8px;"><a href="guide.html">利用ガイド</a></li>
-                        <li style="margin-bottom: 8px;"><a href="terms.html">利用規約</a></li>
+                        <li style="margin-bottom: 8px;"><a href="index.html" data-i18n="footer-link-home">ホーム</a></li>
+                        <li style="margin-bottom: 8px;"><a href="guide.html" data-i18n="footer-link-guide">利用ガイド</a>
+                        </li>
+                        <li style="margin-bottom: 8px;"><a href="terms.html" data-i18n="footer-link-terms">利用規約</a></li>
                         <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <span style="font-weight: 700; color: white; display: block; margin-bottom: 8px;"
+                                data-i18n="footer-contact-title">お問い合わせ</span>
                             <span
-                                style="font-weight: 700; color: white; display: block; margin-bottom: 8px;">お問い合わせ</span>
-                            <span
-                                style="font-size: 0.85rem; color: rgba(255,255,255,0.7); display: block; margin-bottom: 12px;">
+                                style="font-size: 0.85rem; color: rgba(255,255,255,0.7); display: block; margin-bottom: 12px;"
+                                data-i18n="footer-contact-info">
                                 丹波篠山市 商工観光課<br>
                                 Tel: 079-552-1111（代表）
                             </span>
                             <a href="https://www.city.tambasasayama.lg.jp/soshikikarasagasu/shokokankoka/index.html"
                                 target="_blank" class="btn"
-                                style="background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center; border: 1px solid rgba(255,255,255,0.2);">
+                                style="background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center; border: 1px solid rgba(255,255,255,0.2);"
+                                data-i18n="footer-contact-btn">
                                 <i class="fas fa-external-link-alt"></i> 市・商工観光課サイト
                             </a>
                         </li>
@@ -399,7 +397,7 @@
             </div>
             <div
                 style="text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-                <p>&copy; 2026 Norude Sasayama. All Rights Reserved.</p>
+                <p data-i18n="footer-copyright">&copy; 2026 Norude Sasayama. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -424,32 +422,32 @@
 
                 <div class="modal-grid">
                     <div class="info-section">
-                        <h3>ご利用案内</h3>
+                        <h3 data-i18n="modal-guide">ご利用案内</h3>
                         <table class="info-table">
                             <tr id="modal-hours-row" style="display: none;">
-                                <th>営業時間</th>
+                                <th data-i18n="modal-hours">営業時間</th>
                                 <td id="modal-hours">-</td>
                             </tr>
                             <tr id="modal-holidays-row" style="display: none;">
-                                <th>休業期間</th>
+                                <th data-i18n="modal-holidays">休業期間</th>
                                 <td id="modal-holidays">-</td>
                             </tr>
                             <tr>
-                                <th>利用料金</th>
+                                <th data-i18n="modal-price-label">利用料金</th>
                                 <td id="modal-price">¥800 / 3時間</td>
                             </tr>
                             <tr>
-                                <th>台数</th>
+                                <th data-i18n="modal-ports-label">台数</th>
                                 <td id="modal-ports">5台</td>
                             </tr>
                             <tr>
-                                <th>自転車タイプ</th>
+                                <th data-i18n="modal-type-label">自転車タイプ</th>
                                 <td id="modal-bike-type">電動アシスト自転車</td>
                             </tr>
                         </table>
                     </div>
                     <div class="access-section">
-                        <h3>アクセス</h3>
+                        <h3 data-i18n="modal-access-label">アクセス</h3>
                         <div class="modal-map" id="modal-map-container">
                             <!-- Map Embed will go here -->
                             <div
