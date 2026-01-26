@@ -309,12 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderStations('managed-stations', stations, 'fa-parking text-primary');
     renderStations('manned-stations', mannedStations, 'fa-bicycle text-secondary');
 
-    // Fallback for general .station-list (like on stations.html)
-    const generalList = document.querySelector('.station-list:not(#managed-stations):not(#manned-stations)');
-    if (generalList) {
-        renderStations(generalList.className.split(' ')[0], stations, 'fa-parking text-primary');
-    }
-
     // Initial call for animations (handles static and dynamically added items)
     initAnimations();
 });
