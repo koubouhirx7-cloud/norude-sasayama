@@ -87,6 +87,17 @@ a {
     align-items: center;
 }
 
+/* Utilities */
+.sp-br {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sp-br {
+        display: inline;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
