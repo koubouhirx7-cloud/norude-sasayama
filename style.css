@@ -41,14 +41,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Hide content until authenticated */
-.auth-locked .navbar,
-.auth-locked header,
-.auth-locked section,
-.auth-locked footer {
-    visibility: hidden;
-    opacity: 0;
-}
+/* Hide content until authenticated - REMOVED */
 
 h1,
 h2,
