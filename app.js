@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市西町25',
             hours: '24時間',
             price: '¥800 / 3時間',
-            ports: '5ポート',
+            ports: '5台',
             bikeType: '電動アシスト自転車',
             description: '城下町の中心に位置し、観光の拠点に最適です。歴史的な街並みを楽しみながら巡るのに便利なステーションです。'
         },
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市日置383-1',
             hours: '8:30 - 17:15',
             price: '¥800 / 3時間',
-            ports: '3ポート',
+            ports: '3台',
             bikeType: '電動アシスト自転車',
             description: '城東地区の拠点となるステーションです。周辺の里山風景を楽しみながらのサイクリングにおすすめです。'
         },
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市多紀浄174',
             hours: '8:30 - 17:15',
             price: '¥800 / 3時間',
-            ports: '3ポート',
+            ports: '3台',
             bikeType: '電動アシスト自転車',
             description: '多紀地区の観光や移動に便利なスポットです。自然豊かなコースが周辺に広がっています。'
         },
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市杉68',
             hours: '9:00 - 21:00',
             price: '¥800 / 3時間',
-            ports: '4ポート',
+            ports: '4台',
             bikeType: '電動アシスト自転車',
             description: '市民の憩いの場であるハートピアに設置。文化施設へのアクセスも良好です。'
         },
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市北新町97',
             hours: '9:00 - 17:00',
             price: '¥800 / 3時間',
-            ports: '6ポート',
+            ports: '6台',
             bikeType: '電動アシスト自転車',
             description: '観光案内のすぐそば。最新の観光情報を手に入れてから、すぐに旅を始められます。'
         },
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市大沢640',
             hours: '24時間',
             price: '¥800 / 3時間',
-            ports: '10ポート',
+            ports: '10台',
             bikeType: '電動アシスト自転車',
             description: '丹波篠山の玄関口。電車を降りてすぐに自転車を借りて、市内中心部へ向かうことができます。'
         },
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市大沢611-3',
             hours: '9:00 - 17:00',
             price: '¥800 / 3時間',
-            ports: '4ポート',
+            ports: '4台',
             bikeType: '電動アシスト自転車',
             description: '広大な公園内だけでなく、周辺のサイクリングロードを楽しむ拠点として最適です。'
         },
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: '兵庫県丹波篠山市小立727',
             hours: '10:00 - 17:00 (水・木休)',
             price: '¥800 / 3時間',
-            ports: '3ポート',
+            ports: '3台',
             bikeType: '電動アシスト自転車',
             description: '家族連れに人気のミュージアムに併設。少し足を伸ばして大芋地区の散策にも便利です。'
         }
