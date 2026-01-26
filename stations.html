@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ステーション一覧 | Norude Sasayama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="auth.js"></script>
+    <style>
+        .stations-header {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            background: linear-gradient(rgba(26, 77, 46, 0.05), rgba(26, 77, 46, 0.1));
+            text-align: center;
+        }
+
+        .stations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 32px;
+            padding: 40px 0;
+        }
+
+        .station-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .station-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .station-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .station-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .station-info {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .station-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+        }
+
+        .station-address {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .station-address i {
+            margin-top: 3px;
+            color: var(--color-secondary);
+        }
+
+        .station-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .stations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Norude Sasayama" style="height: 50px; width: auto;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#about">システムについて</a>
+                <a href="guide.html">利用ガイド</a>
+                <a href="stations.html" class="active">ステーション</a>
+                <a href="index.html#mobility">その他のモビリティ</a>
+                <a href="index.html#access">アクセス</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="stations-header">
+        <div class="container">
+            <h1 class="section-title">ステーション案内</h1>
+            <p>丹波篠山市内の主要スポットに設置されている、レンタサイクルポートの情報です。</p>
+        </div>
+    </header>
+
+    <!-- Stations List -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="stations-grid" id="stations-container">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+                <div>
+                    <h3>Norude Sasayama</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;">
+                        丹波篠山市の持続可能な観光と生活を支える<br>
+                        次世代モビリティネットワーク
+                    </p>
+                    <div style="margin-top: 24px; font-size: 0.8rem; line-height: 1.6; color: rgba(255,255,255,0.8);">
+                        <!-- Project Owner -->
+                        <div style="margin-bottom: 20px;">
+                            <span
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; display: inline-block; margin-bottom: 4px;">事業主体</span><br>
+                            <span
+                                style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 4px;">丹波篠山市
+                                商工観光課</span>
+                            <span style="font-size: 0.8rem; display: block; opacity: 0.8;">
+                                〒669-2397 兵庫県丹波篠山市北新町41<br>
+                                Tel 079-552-1111 / Fax 079-552-5665
+                            </span>
+                        </div>
+
+                        <!-- Operation -->
+                        <div style="margin-bottom: 12px; display: flex; align-items: baseline; gap: 10px;">
+                            <span
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap;">運営・管理</span>
+                            <span>ハイランダー / 里山の自転車店</span>
+                        </div>
+
+                        <!-- System -->
+                        <div style="display: flex; align-items: baseline; gap: 10px;">
+                            <span
+                                style="border: 1px solid rgba(255,255,255,0.4); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap; align-self: flex-start; margin-top: 3px;">システム</span>
+                            <div>
+                                神戸大学発認定ベンチャー<br>
+                                株式会社bLink Technologies
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="min-width: 250px;">
+                    <h4>Links & Contact</h4>
+                    <ul style="list-style: none; margin-top: 10px;">
+                        <li style="margin-bottom: 8px;"><a href="index.html">ホーム</a></li>
+                        <li style="margin-bottom: 8px;"><a href="guide.html">利用ガイド</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#">利用規約</a></li>
+                        <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <span
+                                style="font-weight: 700; color: white; display: block; margin-bottom: 8px;">お問い合わせ</span>
+                            <span
+                                style="font-size: 0.85rem; color: rgba(255,255,255,0.7); display: block; margin-bottom: 12px;">
+                                丹波篠山市 商工観光課<br>
+                                Tel: 079-552-1111（代表）
+                            </span>
+                            <a href="https://www.city.tambasasayama.lg.jp/soshikikarasagasu/shokokankoka/index.html"
+                                target="_blank" class="btn"
+                                style="background: rgba(255,255,255,0.1); color: white; padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center; border: 1px solid rgba(255,255,255,0.2);">
+                                <i class="fas fa-external-link-alt"></i> 市・商工観光課サイト
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                <p>&copy; 2026 Norude Sasayama. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Use the same data as app.js (or we could centralize it)
+        const stations = [
+            { name: '篠山城下町ホテル NIPPONIA', coords: [135.2165, 35.0725], address: '兵庫県丹波篠山市西町25' },
+            { name: '丹波篠山市役所 城東支所', coords: [135.2530, 35.0780], address: '兵庫県丹波篠山市日置383-1' },
+            { name: '丹波篠山市役所 多岐支所', coords: [135.1250, 35.1150], address: '兵庫県丹波篠山市多紀町' }, // 暫定
+            { name: '丹波篠山ハートピア', coords: [135.2150, 35.0750], address: '兵庫県丹波篠山市河原町' }, // 暫定
+            { name: '丹波篠山観光協会', coords: [135.2191, 35.0755], address: '兵庫県丹波篠山市北新町97' },
+            { name: 'JR篠山口駅', coords: [135.1776, 35.0562], address: '兵庫県丹波篠山市大沢' },
+            { name: '兵庫県立丹波並木道中央公園', coords: [135.1606, 35.0755], address: '兵庫県丹波篠山市大沢611-3' },
+            { name: '篠山チルドレンミュージアム', coords: [135.2750, 35.0720], address: '兵庫県丹波篠山市小立727' }
+        ];
+
+        const container = document.getElementById('stations-container');
+
+        stations.forEach((station, index) => {
+            const card = document.createElement('div');
+            card.className = 'station-card animate-scroll';
+            card.style.transitionDelay = `${index * 0.1}s`;
+
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${station.coords[1]},${station.coords[0]}`;
+
+            card.innerHTML = `
+                <div class="station-image">
+                    <div style="width:100%; height:100%; background: linear-gradient(45deg, var(--color-primary), var(--color-secondary)); display:flex; align-items:center; justify-content:center; color:white; font-size:3rem;">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                </div>
+                <div class="station-info">
+                    <h2 class="station-name">${station.name}</h2>
+                    <p class="station-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>${station.address}</span>
+                    </p>
+                    <div class="station-actions">
+                        <a href="${mapsUrl}" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="fas fa-map-marked-alt"></i> Google Mapsで見る
+                        </a>
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+
+        // Simple observer for animation
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.animate-scroll').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            obs.observe(el);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('is-active');
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
