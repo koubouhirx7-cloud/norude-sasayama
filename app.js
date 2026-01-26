@@ -67,15 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Data Definitions
     const stations = [
-        { name: '篠山城下町ホテル NIPPONIA', coords: [135.2165, 35.0725], icon: 'bicycle' },
-
-        { name: '丹波篠山市役所 城東支所', coords: [135.2530, 35.0780], icon: 'bicycle' },
-        { name: '丹波篠山市役所 多岐支所', coords: [135.1250, 35.1150], icon: 'bicycle' },
-        { name: '丹波篠山ハートピア', coords: [135.2150, 35.0750], icon: 'bicycle' },
-        { name: '丹波篠山観光協会', coords: [135.2191, 35.0755], icon: 'bicycle' },
-        { name: 'JR篠山口駅', coords: [135.1776, 35.0562], icon: 'bicycle' },
-        { name: '兵庫県立丹波並木道中央公園', coords: [135.1606, 35.0755], icon: 'bicycle' },
-        { name: '篠山チルドレンミュージアム', coords: [135.2750, 35.0720], icon: 'bicycle' }
+        { name: '篠山城下町ホテル NIPPONIA', coords: [135.2165, 35.0725], address: '兵庫県丹波篠山市西町25' },
+        { name: '丹波篠山市役所 城東支所', coords: [135.2530, 35.0780], address: '兵庫県丹波篠山市日置383-1' },
+        { name: '丹波篠山市役所 多岐支所', coords: [135.1250, 35.1150], address: '兵庫県丹波篠山市多紀浄174' },
+        { name: '丹波篠山ハートピア', coords: [135.2150, 35.0750], address: '兵庫県丹波篠山市杉68' },
+        { name: '丹波篠山観光協会', coords: [135.2191, 35.0755], address: '兵庫県丹波篠山市北新町97' },
+        { name: 'JR篠山口駅', coords: [135.1776, 35.0562], address: '兵庫県丹波篠山市大沢640' },
+        { name: '兵庫県立丹波並木道中央公園', coords: [135.1606, 35.0755], address: '兵庫県丹波篠山市大沢611-3' },
+        { name: '篠山チルドレンミュージアム', coords: [135.2750, 35.0720], address: '兵庫県丹波篠山市小立727' }
     ];
 
     const spots = [
@@ -83,28 +82,38 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'かかしの里', coords: [135.2600, 35.0600], description: 'ユニークな案山子が見られるスポット', icon: 'camera' }
     ];
 
-    // Render Station List in HTML
-    const stationListContainer = document.querySelector('.station-list');
-    if (stationListContainer) {
-        stationListContainer.innerHTML = ''; // Clear static content
-        stations.forEach(station => {
-            const item = document.createElement('div');
-            item.className = 'station-item animate-scroll';
+    // Render Station List/Grid in HTML
+    const stationContainer = document.querySelector('.station-list');
+    if (stationContainer) {
+        stationContainer.innerHTML = ''; // Clear static content
+        stations.forEach((station, index) => {
+            const card = document.createElement('div');
+            card.className = 'station-card animate-scroll';
+            card.style.transitionDelay = `${index * 0.1}s`;
 
-            // Create Google Maps link
             const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${station.coords[1]},${station.coords[0]}`;
 
-            item.innerHTML = `
-                <i class="fas fa-parking text-primary"></i> 
-                <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
-                    ${station.name}
-                </a>
+            card.innerHTML = `
+                <div class="station-card-image">
+                    <i class="fas fa-bicycle"></i>
+                </div>
+                <div class="station-card-info">
+                    <h3 class="station-card-name">${station.name}</h3>
+                    <p class="station-card-address">
+                        <i class="fas fa-map-marker-alt" style="color: var(--color-secondary);"></i>
+                        ${station.address}
+                    </p>
+                    <div class="station-card-actions">
+                        <a href="${mapsUrl}" target="_blank" class="station-card-btn">
+                            <i class="fas fa-map-marked-alt"></i> Google Mapsで見る
+                        </a>
+                    </div>
+                </div>
             `;
-            stationListContainer.appendChild(item);
+            stationContainer.appendChild(card);
         });
     }
 
     // Initial call for animations (handles static and dynamically added items)
     initAnimations();
 });
-
