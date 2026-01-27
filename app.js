@@ -854,13 +854,17 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     };
 
-    const btnNearest = document.getElementById('btn-nearest-station');
-    if (btnNearest) {
-        btnNearest.addEventListener('click', () => sortStationsByLocation('location-status', 'btn-nearest-station'));
-    }
+    // Only register geolocation event listeners on mobile devices
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        const btnNearest = document.getElementById('btn-nearest-station');
+        if (btnNearest) {
+            btnNearest.addEventListener('click', () => sortStationsByLocation('location-status', 'btn-nearest-station'));
+        }
 
-    const btnNearestManned = document.getElementById('btn-nearest-manned');
-    if (btnNearestManned) {
-        btnNearestManned.addEventListener('click', () => sortStationsByLocation('location-status-manned', 'btn-nearest-manned'));
+        const btnNearestManned = document.getElementById('btn-nearest-manned');
+        if (btnNearestManned) {
+            btnNearestManned.addEventListener('click', () => sortStationsByLocation('location-status-manned', 'btn-nearest-manned'));
+        }
     }
 });
