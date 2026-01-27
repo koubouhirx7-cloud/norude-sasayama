@@ -609,12 +609,23 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '丹波篠山市観光協会', en: 'Tourism Association Manned' },
-            coords: [135.215286, 35.075110], // Synced with managed station
-            hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
+            coords: [135.21681, 35.07594], // Updated to Plus Code 36G8+9P
+            hours: {
+                ja: '9:00 - 17:00 (11月～2月は16:00まで)',
+                en: '9:00 AM - 5:00 PM (Until 4:00 PM Nov-Feb)'
+            },
             holidays: { ja: '年末年始', en: 'New Year Holidays' },
+            ports: {
+                ja: '電動9台 / 幼児2人同乗用1台 / 普通15台',
+                en: 'Electric: 9, Child-seat: 1, Regular: 15'
+            },
+            price: {
+                ja: '電動1日¥1000(市民¥500)・90分¥600 / 普通1日¥800(市民¥400)・90分¥500',
+                en: 'Electric: ¥1000/day (¥500 residents), ¥600/90min / Regular: ¥800/day (¥400 residents), ¥500/90min'
+            },
             description: {
-                ja: '観光案内のすぐそば。スタッフからおすすめルートを聞いてから旅を始められます。',
-                en: 'Located near the info desk. Get local tips from staff before you start.'
+                ja: '観光案内のすぐそば。スタッフからおすすめルートを聞いてから旅を始められます。本人確認書類をお持ちください。',
+                en: 'Located near the info desk. Get local tips from staff before you start. Please bring ID.'
             }
         },
         {
