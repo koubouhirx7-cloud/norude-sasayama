@@ -501,9 +501,12 @@ document.addEventListener('DOMContentLoaded', () => {
             name: { ja: '丹波篠山観光協会', en: 'Tourism Association' },
             coords: [135.21681, 35.07594],
             address: { ja: '兵庫県丹波篠山市北新町97', en: '97 Kitashin-machi, Tamba Sasayama, Hyogo' },
-            hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
-            price: { ja: '¥800 / 3時間', en: '¥800 / 3 Hours' },
-            ports: { ja: '6台', en: '6 Bikes' },
+            hours: { ja: '24時間', en: '24 Hours' },
+            price: {
+                ja: '終日利用 ¥800（翌日9時から同じサイクル）',
+                en: 'All-day usage ¥800 (Same cycle from 9 AM next day)'
+            },
+            ports: { ja: '2台', en: '2 Bikes' },
             bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
             description: {
                 ja: '観光案内のすぐそば。最新の観光情報を手に入れてから、すぐに旅を始められます。',
