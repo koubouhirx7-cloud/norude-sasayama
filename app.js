@@ -638,20 +638,24 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: 'ハイランダー / 里山の自転車店', en: 'Highlander / Satoyama Bicycle Shop' },
-            coords: [135.1500, 35.0800],
+            coords: [135.1645204525145, 35.062319192454055],
             hours: { ja: '10:00 - 18:00', en: '10:00 AM - 6:00 PM' },
             holidays: { ja: '水曜日', en: 'Wednesdays' },
             description: {
                 ja: '本格的な自転車も取り扱うプロショップ。里山を巡るのに最適な自転車を選べます。',
-                name: { ja: 'ユニトピアささやま', en: 'Unitopia Sasayama' },
-                coords: [135.19572963196205, 35.10065491845913],
-                hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
-                holidays: { ja: '年中無休（点検休園あり）', en: 'Open daily (except for maintenance)' },
-                description: {
-                    ja: '大型レジャー施設内から出発。広大な敷地の散策や周辺観光におすすめです。',
-                    en: 'Depart from this large resort facility. Highly recommended for vast grounds and nearby spots.'
-                }
+                en: 'A pro shop with a wide range of bikes. Find the best machine for exploring the countryside.'
             }
+        },
+        {
+            name: { ja: 'ユニトピアささやま', en: 'Unitopia Sasayama' },
+            coords: [135.19572963196205, 35.10065491845913],
+            hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
+            holidays: { ja: '年中無休（点検休園あり）', en: 'Open daily (except for maintenance)' },
+            description: {
+                ja: '大型レジャー施設内から出発。広大な敷地の散策や周辺観光におすすめです。',
+                en: 'Depart from this large resort facility. Highly recommended for vast grounds and nearby spots.'
+            }
+        }
     ];
 
     const spots = [
