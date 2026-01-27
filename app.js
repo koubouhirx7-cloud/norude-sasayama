@@ -648,6 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 en: 'Website'
             },
             website: 'https://high-lander2.com/',
+            heroImage: 'assets/highlander-shop.jpg',
             bikeType: {
                 ja: '各種要望に合わせた自転車',
                 en: 'Custom bikes tailored to your needs'
@@ -682,6 +683,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!modal) return;
 
         document.getElementById('modal-name').textContent = station.name[currentLang];
+
+        // Set Hero Image
+        const modalHero = document.getElementById('modal-hero');
+        if (modalHero) {
+            if (station.heroImage) {
+                modalHero.style.backgroundImage = `url('${station.heroImage}')`;
+                modalHero.style.backgroundSize = 'cover';
+                modalHero.style.backgroundPosition = 'center';
+                modalHero.innerHTML = '';
+            } else {
+                modalHero.style.backgroundImage = '';
+                modalHero.innerHTML = '<span>Hero Image</span>';
+            }
+        }
+
 
         // Conditional rows: Hours
         const hoursRow = document.getElementById('modal-hours-row');
