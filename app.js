@@ -790,6 +790,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!statusEl || !btn) return;
 
+        // Only enable geolocation on mobile devices
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            return; // Silently do nothing on desktop
+        }
+
         if (!navigator.geolocation) {
             statusEl.textContent = translations[currentLang]["location-error"];
             return;
