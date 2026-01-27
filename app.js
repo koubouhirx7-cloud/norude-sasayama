@@ -603,7 +603,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '立杭陶の郷', en: 'Tachikui Sue no Sato' },
-            coords: [135.1310, 35.0265], // Updated based on Plus Code X4JJ+CM
+            coords: [135.13166931203125, 34.98130374642305], // Exact coordinates from Plus Code X4JJ+CM
             hours: { ja: '10:00 - 16:00', en: '10:00 AM - 4:00 PM' },
             holidays: { ja: '火曜日（祝日は営業）、年末年始', en: 'Tuesdays (open if holiday), New Year' },
             price: {
