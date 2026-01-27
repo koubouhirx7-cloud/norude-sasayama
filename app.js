@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-copyright": "© 2026 Norude Sasayama. All Rights Reserved.",
             "modal-guide": "ご利用案内",
             "modal-hours": "営業時間",
-            "modal-holidays": "休業期間",
+            "modal-holidays": "ホームページ",
             "modal-price-label": "利用料金",
             "modal-ports-label": "台数",
             "modal-type-label": "自転車タイプ",
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-copyright": "© 2026 Norude Sasayama. All Rights Reserved.",
             "modal-guide": "Information",
             "modal-hours": "Hours",
-            "modal-holidays": "Closed",
+            "modal-holidays": "Website",
             "modal-price-label": "Price",
             "modal-ports-label": "Capacity",
             "modal-type-label": "Bike Type",
@@ -700,9 +700,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const holidaysText = document.getElementById('modal-holidays');
         if (holidaysRow && holidaysText) {
             if (station.holidays) {
-                // If station has a website, show holidays text with clickable link
+                // If station has a website, show only the clickable link
                 if (station.website) {
-                    holidaysText.innerHTML = `${station.holidays[currentLang]} <a href="${station.website}" target="_blank" style="color: var(--color-primary); text-decoration: underline;">${station.website}</a>`;
+                    holidaysText.innerHTML = `<a href="${station.website}" target="_blank" style="color: var(--color-primary); text-decoration: underline;">${station.website}</a>`;
                 } else {
                     holidaysText.textContent = station.holidays[currentLang];
                 }
