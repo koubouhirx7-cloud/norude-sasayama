@@ -435,12 +435,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const stations = [
         {
             name: { ja: '篠山城下町ホテル NIPPONIA', en: 'Hotel NIPPONIA' },
-            coords: [135.2165, 35.0725],
+            coords: [135.212789, 35.075471],
             address: { ja: '兵庫県丹波篠山市西町25', en: '25 Nishi-machi, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
-            price: { ja: '¥800 / 3時間', en: '¥800 / 3 Hours' },
-            ports: { ja: '5台', en: '5 Bikes' },
-            bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
+            price: {
+                ja: '500円/1時間（以降翌日AM9時まで1,100円）、翌日以降繰り返し',
+                en: '500 yen / 1h (1,100 yen until 9 AM next day), repeats daily'
+            },
+            ports: { ja: '2台', en: '2 Bikes' },
+            bikeType: { ja: 'ミニベロ', en: 'Minivelo' },
             description: {
                 ja: '城下町の中心に位置し、観光の拠点に最適です。歴史的な街並みを楽しみながら巡るのに便利なステーションです。',
                 en: 'Located in the heart of the castle town, perfect as a sightseeing base. Enjoy exploring the historic streets with ease.'
@@ -463,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
-            name: { ja: '丹波篠山市役所 多岐支所', en: 'Taki Branch Office' },
+            name: { ja: '丹波篠山市役所 多紀支所', en: 'Taki Branch Office' },
             coords: [135.343914, 35.071843],
             address: { ja: '兵庫県丹波篠山市福住342', en: '342 Fukusumi, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
@@ -479,9 +482,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         {
-            name: { ja: '丹波篠山ハートピア', en: 'Tamba Sasayama Heartpia' },
-            coords: [135.2150, 35.0750],
-            address: { ja: '兵庫県丹波篠山市杉68', en: '68 Sugi, Tamba Sasayama, Hyogo' },
+            name: { ja: '丹波篠山市立ハートピアセンター', en: 'Tamba Sasayama Heartpia Center' },
+            coords: [135.314904, 35.090498],
+            address: { ja: '兵庫県丹波篠山市細工所117', en: '117 Saikusho, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
@@ -496,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '丹波篠山観光協会', en: 'Tourism Association' },
-            coords: [135.2191, 35.0755],
+            coords: [135.215286, 35.075110],
             address: { ja: '兵庫県丹波篠山市北新町97', en: '97 Kitashin-machi, Tamba Sasayama, Hyogo' },
             hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
             price: { ja: '¥800 / 3時間', en: '¥800 / 3 Hours' },
@@ -560,9 +563,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const mannedStations = [
         {
             name: { ja: 'JR篠山口駅レンタサイクル', en: 'JR Sasayamaguchi Manned Rental' },
-            coords: [135.1776, 35.0562],
-            hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
-            holidays: { ja: '年末年始', en: 'New Year Holidays' },
+            coords: [135.177784, 35.055984], // Updated based on Plus Code 354H+94
+            hours: {
+                ja: '9:00 - 17:00 (11月は16:00まで)',
+                en: '9:00 AM - 5:00 PM (Until 4:00 PM in Nov)'
+            },
+            holidays: {
+                ja: '年末年始、12月〜2月は冬期休業',
+                en: 'New Year Holidays, Closed Dec-Feb (Winter)'
+            },
+            ports: {
+                ja: '電動40台 / 子供乗せ電動1台 / 普通10台',
+                en: 'Electric: 40, Child-seat: 1, Regular: 10'
+            },
             description: {
                 ja: 'JR篠山口駅のすぐそば。電車でのアクセスに最も便利な有人レンタサイクルです。',
                 en: 'Right by the station. The most convenient manned rental for those arriving by train.'
@@ -590,7 +603,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '丹波篠山市観光協会', en: 'Tourism Association Manned' },
-            coords: [135.2191, 35.0755],
+            coords: [135.215286, 35.075110], // Synced with managed station
             hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
             holidays: { ja: '年末年始', en: 'New Year Holidays' },
             description: {
