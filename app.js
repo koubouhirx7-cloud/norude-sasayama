@@ -624,12 +624,12 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             holidays: { ja: '年末年始', en: 'New Year Holidays' },
             ports: {
-                ja: '電動9台 / 幼児2人同乗用1台 / 普通15台',
-                en: 'Electric: 9, Child-seat: 1, Regular: 15'
+                ja: '2台',
+                en: '2 Bikes'
             },
             price: {
-                ja: '電動1日¥1000(市民¥500)・90分¥600 / 普通1日¥800(市民¥400)・90分¥500',
-                en: 'Electric: ¥1000/day (¥500 residents), ¥600/90min / Regular: ¥800/day (¥400 residents), ¥500/90min'
+                ja: '終日利用 ¥800（翌日9時から同じサイクル）',
+                en: 'All-day usage ¥800 (Same cycle from 9 AM next day)'
             },
             description: {
                 ja: '観光案内のすぐそば。スタッフからおすすめルートを聞いてから旅を始められます。本人確認書類をお持ちください。',
