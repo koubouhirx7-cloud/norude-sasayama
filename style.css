@@ -484,6 +484,15 @@ a {
     gap: var(--spacing-md);
 }
 
+/* Hide location sort buttons on desktop */
+@media (min-width: 769px) {
+
+    #btn-nearest-station,
+    #btn-nearest-manned {
+        display: none !important;
+    }
+}
+
 .station-item {
     background: white;
     padding: var(--spacing-md);
