@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '丹波篠山観光協会', en: 'Tourism Association' },
-            coords: [135.215286, 35.075110],
+            coords: [135.21681, 35.07594],
             address: { ja: '兵庫県丹波篠山市北新町97', en: '97 Kitashin-machi, Tamba Sasayama, Hyogo' },
             hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
             price: { ja: '¥800 / 3時間', en: '¥800 / 3 Hours' },
@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: 'JR篠山口駅', en: 'JR Sasayamaguchi Station' },
-            coords: [135.1782, 35.0567],
+            coords: [135.17794, 35.05644],
             address: { ja: '兵庫県丹波篠山市大沢640', en: '640 Osawa, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
@@ -528,15 +528,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '兵庫県立丹波並木道中央公園', en: 'Namikimichi Central Park' },
-            coords: [135.1606, 35.0755],
+            coords: [135.16144, 35.07494],
             address: { ja: '兵庫県丹波篠山市大沢611-3', en: '611-3 Osawa, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
                 en: '800 yen / 3h (1,500 yen until 9 AM next day), repeats daily'
             },
-            ports: { ja: '4台', en: '4 Bikes' },
-            bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
+            ports: { ja: '2台', en: '2 Bikes' },
+            bikeType: {
+                ja: '電動アシスト自転車（チャイルドトレーラー、チャイルドシート付き）',
+                en: 'Electric Assist Bike (w/ Child Trailer & Seat)'
+            },
             description: {
                 ja: '広大な公園内だけでなく、周辺のサイクリングロードを楽しむ拠点として最適です。',
                 en: 'Perfect as a base for enjoying the vast park and nearby cycling roads.'
@@ -544,15 +547,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '篠山チルドレンミュージアム', en: 'Children\'s Museum' },
-            coords: [135.2750, 35.0720],
+            coords: [135.2707, 35.0707],
             address: { ja: '兵庫県丹波篠山市小立727', en: '727 Kodachi, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
                 en: '800 yen / 3h (1,500 yen until 9 AM next day), repeats daily'
             },
-            ports: { ja: '3台', en: '3 Bikes' },
-            bikeType: { ja: '電動アシスト自転車', en: 'Electric Assist Bike' },
+            ports: { ja: '2台', en: '2 Bikes' },
+            bikeType: {
+                ja: '電動アシスト自転車（チャイルドトレーラー、チャイルドシート付き）',
+                en: 'Electric Assist Bike (w/ Child Trailer & Seat)'
+            },
             description: {
                 ja: '家族連れに人気のミュージアムに併設。少し足を伸ばして大芋地区の散策にも便利です。',
                 en: 'Located by the popular family museum. Great for exploring the scenic Okumo district.'
@@ -583,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '兵庫県立丹波並木道中央公園', en: 'Namikimichi Park Manned' },
-            coords: [135.1606, 35.0755],
+            coords: [135.16144, 35.07494],
             hours: { ja: '9:00 - 17:00', en: '9:00 AM - 5:00 PM' },
             holidays: { ja: '年末年始', en: 'New Year Holidays' },
             description: {

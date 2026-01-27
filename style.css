@@ -723,6 +723,68 @@ footer a:hover {
         width: 100%;
         max-width: 300px;
     }
+
+    /* Modal Mobile Adjustments */
+    .modal-container {
+        max-height: 95vh;
+        border-radius: var(--radius-md);
+    }
+
+    .modal-hero {
+        height: 180px;
+    }
+
+    .modal-content {
+        padding: 24px 20px;
+    }
+
+    .modal-title-area {
+        margin-bottom: 20px;
+    }
+
+    .modal-title-area h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-description {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+        line-height: 1.7;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .info-table th,
+    .info-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+    }
+
+    .info-table th {
+        background: transparent;
+        color: var(--color-primary);
+        font-size: 0.8rem;
+        padding-bottom: 2px;
+        border-bottom: none;
+    }
+
+    .info-table td {
+        font-size: 1rem;
+        padding-top: 2px;
+        margin-bottom: 4px;
+    }
+
+    .modal-map {
+        height: 200px;
+    }
+
+    .info-table tr:last-child {
+        border-bottom: none;
+    }
 }
 
 /* Map iframe */
