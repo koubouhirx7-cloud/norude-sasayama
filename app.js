@@ -547,8 +547,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '篠山チルドレンズミュージアム', en: 'Children\'s Museum' },
-            coords: [135.270580, 35.070580],
-            address: { ja: '兵庫県丹波篠山市小立727', en: '727 Kodachi, Tamba Sasayama, Hyogo' },
+            coords: [135.2708, 35.0706],
+            address: { ja: '兵庫県丹波篠山市小田中572', en: '572 Odanaka, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
                 ja: '800円/3時間（以降翌日AM9時まで1,500円）、翌日以降繰り返し',
