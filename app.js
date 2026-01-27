@@ -603,9 +603,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '立杭陶の郷', en: 'Tachikui Sue no Sato' },
-            coords: [135.1118, 35.0210],
+            coords: [135.1310, 35.0265], // Updated based on Plus Code X4JJ+CM
             hours: { ja: '10:00 - 16:00', en: '10:00 AM - 4:00 PM' },
             holidays: { ja: '火曜日（祝日は営業）、年末年始', en: 'Tuesdays (open if holiday), New Year' },
+            price: {
+                ja: '普通¥500/日 / 電動(一般)¥1200/日 / 電動(スポーツ)¥1500/日 / 保証金¥1000',
+                en: 'Regular: ¥500/day / E-bike (standard): ¥1200/day / E-bike (sports): ¥1500/day / Deposit: ¥1000'
+            },
             description: {
                 ja: '陶芸の里、今田地区を巡る拠点。坂道の多い地区なので、周辺散策には自転車が便利です。',
                 en: 'A hub for exploring the pottery district of Konda. Bikes are perfect for the hilly terrain.'
