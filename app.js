@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '篠山チルドレンズミュージアム', en: 'Children\'s Museum' },
-            coords: [135.2707, 35.0707],
+            coords: [135.27058, 35.07058],
             address: { ja: '兵庫県丹波篠山市小立727', en: '727 Kodachi, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
