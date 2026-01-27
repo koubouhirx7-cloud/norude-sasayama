@@ -582,6 +582,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ja: '電動40台 / 子供乗せ電動1台 / 普通10台',
                 en: 'Electric: 40, Child-seat: 1, Regular: 10'
             },
+            price: {
+                ja: '電動1日¥1000(市民¥500)・90分¥600 / 普通1日¥800(市民¥400)・90分¥500',
+                en: 'Electric: ¥1000/day (¥500 residents), ¥600/90min / Regular: ¥800/day (¥400 residents), ¥500/90min'
+            },
             description: {
                 ja: 'JR篠山口駅のすぐそば。電車でのアクセスに最も便利な有人レンタサイクルです。',
                 en: 'Right by the station. The most convenient manned rental for those arriving by train.'
