@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: 'JR篠山口駅', en: 'JR Sasayamaguchi Station' },
-            coords: [135.1776, 35.0562],
+            coords: [135.1782, 35.0567],
             address: { ja: '兵庫県丹波篠山市大沢640', en: '640 Osawa, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
