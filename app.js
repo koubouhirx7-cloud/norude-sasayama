@@ -644,8 +644,8 @@ document.addEventListener('DOMContentLoaded', () => {
             coords: [135.1645204525145, 35.062319192454055],
             hours: { ja: '来店予約制', en: 'By Appointment Only' },
             holidays: {
-                ja: 'ホームページをご確認ください https://high-lander2.com/',
-                en: 'Please check website https://high-lander2.com/'
+                ja: 'ホームページ',
+                en: 'Website'
             },
             website: 'https://high-lander2.com/',
             bikeType: {
@@ -700,7 +700,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const holidaysText = document.getElementById('modal-holidays');
         if (holidaysRow && holidaysText) {
             if (station.holidays) {
-                holidaysText.textContent = station.holidays[currentLang];
+                // If station has a website, show holidays text with clickable link
+                if (station.website) {
+                    holidaysText.innerHTML = `${station.holidays[currentLang]} <a href="${station.website}" target="_blank" style="color: var(--color-primary); text-decoration: underline;">${station.website}</a>`;
+                } else {
+                    holidaysText.textContent = station.holidays[currentLang];
+                }
                 holidaysRow.style.display = 'table-row';
             } else {
                 holidaysRow.style.display = 'none';
