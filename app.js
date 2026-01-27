@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: { ja: '篠山チルドレンズミュージアム', en: 'Children\'s Museum' },
-            coords: [135.2708, 35.0706],
+            coords: [135.3205239832004, 35.10642807774576], // Exact coordinates from Plus Code 484C+F5
             address: { ja: '兵庫県丹波篠山市小田中572', en: '572 Odanaka, Tamba Sasayama, Hyogo' },
             hours: { ja: '24時間', en: '24 Hours' },
             price: {
