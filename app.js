@@ -523,6 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 en: '800 yen / 3h (1,500 yen until 9 AM next day), repeats daily'
             },
             ports: { ja: '3台', en: '3 Bikes' },
+            heroImage: 'assets/station-sasayamaguchi.jpg',
             bikeType: { ja: '電動アシスト自転車（うち1台チャイルドシート付）', en: 'Electric Assist Bike (1 with child seat)' },
             description: {
                 ja: '丹波篠山の玄関口。電車を降りてすぐに自転車を借りて、市内中心部へ向かうことができます。',
