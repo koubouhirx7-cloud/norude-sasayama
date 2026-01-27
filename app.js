@@ -641,6 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
             coords: [135.1645204525145, 35.062319192454055],
             hours: { ja: '10:00 - 18:00', en: '10:00 AM - 6:00 PM' },
             holidays: { ja: '水曜日', en: 'Wednesdays' },
+            website: 'https://high-lander2.com/',
             description: {
                 ja: '本格的な自転車も取り扱うプロショップ。里山を巡るのに最適な自転車を選べます。',
                 en: 'A pro shop with a wide range of bikes. Find the best machine for exploring the countryside.'
