@@ -642,9 +642,16 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: { ja: 'ハイランダー / 里山の自転車店', en: 'Highlander / Satoyama Bicycle Shop' },
             coords: [135.1645204525145, 35.062319192454055],
-            hours: { ja: '10:00 - 18:00', en: '10:00 AM - 6:00 PM' },
-            holidays: { ja: '水曜日', en: 'Wednesdays' },
+            hours: { ja: '来店予約制', en: 'By Appointment Only' },
+            holidays: {
+                ja: 'ホームページをご確認ください https://high-lander2.com/',
+                en: 'Please check website https://high-lander2.com/'
+            },
             website: 'https://high-lander2.com/',
+            bikeType: {
+                ja: '各種要望に合わせた自転車',
+                en: 'Custom bikes tailored to your needs'
+            },
             description: {
                 ja: '本格的な自転車も取り扱うプロショップ。里山を巡るのに最適な自転車を選べます。',
                 en: 'A pro shop with a wide range of bikes. Find the best machine for exploring the countryside.'
