@@ -573,7 +573,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mannedStations = [
         {
             name: { ja: 'JR篠山口駅レンタサイクル', en: 'JR Sasayamaguchi Manned Rental' },
-            coords: [135.177784, 35.055984], // Updated based on Plus Code 354H+94
+            coords: [135.1778529, 35.0559571], // Updated from Google Maps link
             hours: {
                 ja: '9:00 - 17:00 (11月は16:00まで)',
                 en: '9:00 AM - 5:00 PM (Until 4:00 PM in Nov)'
