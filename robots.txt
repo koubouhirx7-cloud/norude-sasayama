@@ -1,0 +1,8 @@
+# Norude Sasayama - 丹波篠山レンタサイクル
+# robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://norude-sasayama.jp/sitemap.xml
